@@ -56,6 +56,17 @@ app.add_middleware(
 
 router = APIRouter()
 
+@router.get("/")
+@router.get("")
+def api_root():
+    return {
+        "status": "healthy",
+        "app": "LogDoc",
+        "version": "1.0.0",
+        "datasets_count": len(GLOBAL_STORE.datasets),
+        "active_dataset": GLOBAL_STORE.active_dataset_id
+    }
+
 @router.get("/health")
 def health_check():
     return {
