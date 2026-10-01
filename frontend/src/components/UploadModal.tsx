@@ -41,10 +41,25 @@ export const UploadModal: React.FC<UploadModalProps> = ({
   const handleFileUpload = async (file: File) => {
     try {
       setIsSubmitting(true);
+      // Vercel Serverless payload limit is 4.5 MB. If user uploads a large file, offer to analyze the tail 4 MB
+      if (file.size > 4.2 * 1024 * 1024) {
+        const sizeMb = (file.size / (1024 * 1024)).toFixed(1);
+        const confirmSlice = window.confirm(
+          `This log file is ${sizeMb} MB. Serverless upload limit is 4.5 MB.\n\nWould you like LogDoc to automatically analyze the most recent 4 MB portion of this log file?`
+        );
+        if (!confirmSlice) {
+          setIsSubmitting(false);
+          return;
+        }
+        // Slice the most recent 4MB of the log file
+        const slicedBlob = file.slice(file.size - 4 * 1024 * 1024, file.size);
+        file = new File([slicedBlob], file.name, { type: file.type });
+      }
+
       await onUploadFile(file);
       onClose();
-    } catch (err) {
-      alert('Failed to upload and parse log file: ' + err);
+    } catch (err: any) {
+      alert('Failed to upload and parse log file: ' + (err?.message || err));
     } finally {
       setIsSubmitting(false);
     }

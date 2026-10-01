@@ -20,11 +20,36 @@ export async function selectDataset(name: string): Promise<void> {
 export async function uploadLogFile(file: File): Promise<{ dataset_name: string; total_parsed: number; parser_used: string }> {
   const formData = new FormData();
   formData.append('file', file);
-  const res = await fetch(`${API_BASE}/upload`, {
-    method: 'POST',
-    body: formData,
-  });
-  if (!res.ok) throw new Error('Failed to upload file');
+  
+  let res: Response;
+  try {
+    res = await fetch(`${API_BASE}/upload`, {
+      method: 'POST',
+      body: formData,
+    });
+  } catch (netErr: any) {
+    throw new Error(`Network failure connecting to ${API_BASE}/upload: ${netErr?.message || netErr}`);
+  }
+
+  if (!res.ok) {
+    let msg = `Upload failed (HTTP ${res.status})`;
+    try {
+      const errJson = await res.json();
+      if (errJson && errJson.detail) {
+        msg = errJson.detail;
+      }
+    } catch {
+      if (res.status === 413) {
+        msg = 'File exceeds maximum upload size (4.5 MB). Try uploading a smaller log sample or slice.';
+      } else if (res.status === 401 || res.status === 403) {
+        msg = 'Vercel Authentication blocked the request. Please use https://logdoc-phi.vercel.app.';
+      } else {
+        msg = `Server returned HTTP ${res.status}: ${res.statusText}`;
+      }
+    }
+    throw new Error(msg);
+  }
+
   return res.json();
 }
 
@@ -34,7 +59,14 @@ export async function loadSampleDataset(sampleType: string): Promise<{ dataset_n
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ sample_type: sampleType }),
   });
-  if (!res.ok) throw new Error('Failed to load sample dataset');
+  if (!res.ok) {
+    let msg = 'Failed to load sample dataset';
+    try {
+      const errJson = await res.json();
+      if (errJson?.detail) msg = errJson.detail;
+    } catch {}
+    throw new Error(msg);
+  }
   return res.json();
 }
 

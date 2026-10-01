@@ -97,17 +97,35 @@ def select_dataset(payload: SelectDatasetPayload):
 
 @router.post("/upload")
 async def upload_log_file(file: UploadFile = File(...)):
-    content_bytes = await file.read()
+    try:
+        content_bytes = await file.read()
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to read file content: {str(e)}")
+
+    if not content_bytes:
+        raise HTTPException(status_code=400, detail="The uploaded file is empty (0 bytes).")
+
     try:
         content_text = content_bytes.decode("utf-8")
     except UnicodeDecodeError:
         try:
             content_text = content_bytes.decode("latin-1")
         except Exception:
-            raise HTTPException(status_code=400, detail="Unable to decode file as text.")
+            raise HTTPException(status_code=400, detail="Unable to decode file as text. Please upload plain text log files.")
 
-    dataset_name = file.filename or "uploaded_log"
+    raw_name = file.filename or "uploaded_log.log"
+    # Normalize slashes and remove directory paths
+    clean_name = os.path.basename(raw_name.replace("\\", "/"))
+    # Keep safe alphanumeric, dots, dashes, underscores
+    dataset_name = "".join(c for c in clean_name if c.isalnum() or c in ("-", "_", ".")) or "uploaded_log"
+
     entries, parser_name = parse_raw_log_content(content_text, source_name=dataset_name)
+
+    if not entries:
+        raise HTTPException(
+            status_code=400,
+            detail=f"No readable log lines detected in '{dataset_name}'. Please ensure the file contains valid log records."
+        )
 
     dataset = GLOBAL_STORE.create_dataset(dataset_name, parser_type=parser_name)
     dataset.add_entries(entries)
