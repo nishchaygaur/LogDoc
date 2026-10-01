@@ -1,0 +1,500 @@
+{"timestamp":"2026-10-02T00:26:21.910Z","level":"INFO","service":"order-service","trace_id":"tr-61018","message":"Inventory reserved item_3569 quantity=1"}
+{"timestamp":"2026-10-02T00:26:24.240Z","level":"INFO","service":"cart-service","trace_id":"tr-19397","message":"Payment intent created for amount $26.00"}
+{"timestamp":"2026-10-02T00:26:25.687Z","level":"INFO","service":"order-service","trace_id":"tr-36231","message":"Token verified for user usr_133"}
+{"timestamp":"2026-10-02T00:26:28.530Z","level":"DEBUG","service":"payment-service","trace_id":"tr-52379","message":"Cart items calculated total: $410.00"}
+{"timestamp":"2026-10-02T00:26:29.778Z","level":"INFO","service":"api-gateway","trace_id":"tr-95885","message":"Payment intent created for amount $51.00"}
+{"timestamp":"2026-10-02T00:26:32.341Z","level":"INFO","service":"api-gateway","trace_id":"tr-70399","message":"Cart items calculated total: $359.00"}
+{"timestamp":"2026-10-02T00:26:34.493Z","level":"DEBUG","service":"cart-service","trace_id":"tr-57018","message":"Cart items calculated total: $315.00"}
+{"timestamp":"2026-10-02T00:26:36.368Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-23523","message":"Token verified for user usr_602"}
+{"timestamp":"2026-10-02T00:26:37.920Z","level":"INFO","service":"cart-service","trace_id":"tr-97440","message":"Payment intent created for amount $288.00"}
+{"timestamp":"2026-10-02T00:26:40.612Z","level":"INFO","service":"api-gateway","trace_id":"tr-38815","message":"Cart items calculated total: $23.00"}
+{"timestamp":"2026-10-02T00:26:42.166Z","level":"INFO","service":"inventory-service","trace_id":"tr-72784","message":"Cart items calculated total: $77.00"}
+{"timestamp":"2026-10-02T00:26:44.162Z","level":"INFO","service":"api-gateway","trace_id":"tr-73536","message":"Cart items calculated total: $183.00"}
+{"timestamp":"2026-10-02T00:26:46.412Z","level":"INFO","service":"order-service","trace_id":"tr-89149","message":"Payment intent created for amount $334.00"}
+{"timestamp":"2026-10-02T00:26:47.739Z","level":"INFO","service":"order-service","trace_id":"tr-69322","message":"Cart items calculated total: $101.00"}
+{"timestamp":"2026-10-02T00:26:49.712Z","level":"INFO","service":"payment-service","trace_id":"tr-69338","message":"HTTP GET /api/v1/catalog returned 200 OK duration=56ms"}
+{"timestamp":"2026-10-02T00:26:52.466Z","level":"INFO","service":"payment-service","trace_id":"tr-28733","message":"HTTP GET /api/v1/catalog returned 200 OK duration=24ms"}
+{"timestamp":"2026-10-02T00:26:54.159Z","level":"INFO","service":"auth-service","trace_id":"tr-70681","message":"Inventory reserved item_2599 quantity=5"}
+{"timestamp":"2026-10-02T00:26:55.768Z","level":"INFO","service":"inventory-service","trace_id":"tr-93116","message":"Cart items calculated total: $177.00"}
+{"timestamp":"2026-10-02T00:26:58.197Z","level":"INFO","service":"payment-service","trace_id":"tr-10776","message":"HTTP GET /api/v1/catalog returned 200 OK duration=78ms"}
+{"timestamp":"2026-10-02T00:27:00.227Z","level":"DEBUG","service":"order-service","trace_id":"tr-92499","message":"Inventory reserved item_6573 quantity=1"}
+{"timestamp":"2026-10-02T00:27:01.934Z","level":"INFO","service":"order-service","trace_id":"tr-62456","message":"Cart items calculated total: $66.00"}
+{"timestamp":"2026-10-02T00:27:04.099Z","level":"INFO","service":"api-gateway","trace_id":"tr-59693","message":"Payment intent created for amount $192.00"}
+{"timestamp":"2026-10-02T00:27:06.092Z","level":"INFO","service":"auth-service","trace_id":"tr-26786","message":"Cart items calculated total: $297.00"}
+{"timestamp":"2026-10-02T00:27:08.034Z","level":"INFO","service":"api-gateway","trace_id":"tr-19730","message":"HTTP GET /api/v1/catalog returned 200 OK duration=80ms"}
+{"timestamp":"2026-10-02T00:27:10.362Z","level":"INFO","service":"cart-service","trace_id":"tr-24959","message":"Payment intent created for amount $263.00"}
+{"timestamp":"2026-10-02T00:27:12.436Z","level":"INFO","service":"auth-service","trace_id":"tr-51163","message":"Token verified for user usr_518"}
+{"timestamp":"2026-10-02T00:27:14.261Z","level":"DEBUG","service":"cart-service","trace_id":"tr-67545","message":"HTTP GET /api/v1/catalog returned 200 OK duration=66ms"}
+{"timestamp":"2026-10-02T00:27:16.028Z","level":"INFO","service":"auth-service","trace_id":"tr-29987","message":"Inventory reserved item_2140 quantity=1"}
+{"timestamp":"2026-10-02T00:27:17.967Z","level":"INFO","service":"order-service","trace_id":"tr-42347","message":"Token verified for user usr_764"}
+{"timestamp":"2026-10-02T00:27:20.275Z","level":"DEBUG","service":"auth-service","trace_id":"tr-28639","message":"Cart items calculated total: $492.00"}
+{"timestamp":"2026-10-02T00:27:22.292Z","level":"INFO","service":"cart-service","trace_id":"tr-47256","message":"Token verified for user usr_869"}
+{"timestamp":"2026-10-02T00:27:24.186Z","level":"INFO","service":"api-gateway","trace_id":"tr-21080","message":"HTTP GET /api/v1/catalog returned 200 OK duration=75ms"}
+{"timestamp":"2026-10-02T00:27:26.539Z","level":"DEBUG","service":"auth-service","trace_id":"tr-51002","message":"Inventory reserved item_1643 quantity=1"}
+{"timestamp":"2026-10-02T00:27:28.339Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-94768","message":"Payment intent created for amount $119.00"}
+{"timestamp":"2026-10-02T00:27:29.986Z","level":"INFO","service":"api-gateway","trace_id":"tr-64278","message":"Cart items calculated total: $474.00"}
+{"timestamp":"2026-10-02T00:27:31.903Z","level":"INFO","service":"cart-service","trace_id":"tr-69189","message":"Payment intent created for amount $394.00"}
+{"timestamp":"2026-10-02T00:27:33.886Z","level":"DEBUG","service":"payment-service","trace_id":"tr-69077","message":"Cart items calculated total: $447.00"}
+{"timestamp":"2026-10-02T00:27:36.075Z","level":"INFO","service":"payment-service","trace_id":"tr-80272","message":"Payment intent created for amount $340.00"}
+{"timestamp":"2026-10-02T00:27:38.520Z","level":"INFO","service":"order-service","trace_id":"tr-85250","message":"Inventory reserved item_2766 quantity=1"}
+{"timestamp":"2026-10-02T00:27:39.755Z","level":"INFO","service":"cart-service","trace_id":"tr-64964","message":"Payment intent created for amount $322.00"}
+{"timestamp":"2026-10-02T00:27:42.058Z","level":"DEBUG","service":"auth-service","trace_id":"tr-61277","message":"HTTP GET /api/v1/catalog returned 200 OK duration=69ms"}
+{"timestamp":"2026-10-02T00:27:44.529Z","level":"INFO","service":"auth-service","trace_id":"tr-60317","message":"Inventory reserved item_7618 quantity=3"}
+{"timestamp":"2026-10-02T00:27:46.068Z","level":"INFO","service":"inventory-service","trace_id":"tr-64266","message":"HTTP GET /api/v1/catalog returned 200 OK duration=18ms"}
+{"timestamp":"2026-10-02T00:27:47.882Z","level":"DEBUG","service":"order-service","trace_id":"tr-52046","message":"HTTP GET /api/v1/catalog returned 200 OK duration=62ms"}
+{"timestamp":"2026-10-02T00:27:50.580Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-48019","message":"HTTP GET /api/v1/catalog returned 200 OK duration=33ms"}
+{"timestamp":"2026-10-02T00:27:51.878Z","level":"INFO","service":"api-gateway","trace_id":"tr-74857","message":"Cart items calculated total: $106.00"}
+{"timestamp":"2026-10-02T00:27:54.421Z","level":"INFO","service":"api-gateway","trace_id":"tr-63343","message":"Token verified for user usr_733"}
+{"timestamp":"2026-10-02T00:27:56.408Z","level":"INFO","service":"order-service","trace_id":"tr-44296","message":"Cart items calculated total: $55.00"}
+{"timestamp":"2026-10-02T00:27:58.403Z","level":"INFO","service":"api-gateway","trace_id":"tr-40794","message":"Token verified for user usr_558"}
+{"timestamp":"2026-10-02T00:27:59.722Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-16611","message":"Payment intent created for amount $190.00"}
+{"timestamp":"2026-10-02T00:28:02.049Z","level":"INFO","service":"order-service","trace_id":"tr-25949","message":"Cart items calculated total: $152.00"}
+{"timestamp":"2026-10-02T00:28:03.743Z","level":"INFO","service":"order-service","trace_id":"tr-21643","message":"Token verified for user usr_658"}
+{"timestamp":"2026-10-02T00:28:06.454Z","level":"DEBUG","service":"payment-service","trace_id":"tr-61000","message":"Token verified for user usr_924"}
+{"timestamp":"2026-10-02T00:28:08.330Z","level":"INFO","service":"inventory-service","trace_id":"tr-98251","message":"HTTP GET /api/v1/catalog returned 200 OK duration=38ms"}
+{"timestamp":"2026-10-02T00:28:10.132Z","level":"INFO","service":"order-service","trace_id":"tr-91429","message":"Cart items calculated total: $484.00"}
+{"timestamp":"2026-10-02T00:28:12.443Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-44759","message":"Payment intent created for amount $432.00"}
+{"timestamp":"2026-10-02T00:28:13.673Z","level":"INFO","service":"auth-service","trace_id":"tr-56286","message":"Cart items calculated total: $292.00"}
+{"timestamp":"2026-10-02T00:28:16.267Z","level":"DEBUG","service":"auth-service","trace_id":"tr-26928","message":"Inventory reserved item_6615 quantity=2"}
+{"timestamp":"2026-10-02T00:28:17.758Z","level":"DEBUG","service":"cart-service","trace_id":"tr-55403","message":"Cart items calculated total: $321.00"}
+{"timestamp":"2026-10-02T00:28:20.316Z","level":"INFO","service":"payment-service","trace_id":"tr-72065","message":"Cart items calculated total: $499.00"}
+{"timestamp":"2026-10-02T00:28:22.567Z","level":"INFO","service":"order-service","trace_id":"tr-53073","message":"HTTP GET /api/v1/catalog returned 200 OK duration=75ms"}
+{"timestamp":"2026-10-02T00:28:24.373Z","level":"INFO","service":"inventory-service","trace_id":"tr-45091","message":"Token verified for user usr_618"}
+{"timestamp":"2026-10-02T00:28:26.579Z","level":"DEBUG","service":"auth-service","trace_id":"tr-66021","message":"HTTP GET /api/v1/catalog returned 200 OK duration=16ms"}
+{"timestamp":"2026-10-02T00:28:28.164Z","level":"INFO","service":"auth-service","trace_id":"tr-37147","message":"Payment intent created for amount $449.00"}
+{"timestamp":"2026-10-02T00:28:30.371Z","level":"INFO","service":"inventory-service","trace_id":"tr-57989","message":"Payment intent created for amount $325.00"}
+{"timestamp":"2026-10-02T00:28:31.679Z","level":"DEBUG","service":"cart-service","trace_id":"tr-24422","message":"HTTP GET /api/v1/catalog returned 200 OK duration=37ms"}
+{"timestamp":"2026-10-02T00:28:34.463Z","level":"INFO","service":"auth-service","trace_id":"tr-35681","message":"HTTP GET /api/v1/catalog returned 200 OK duration=28ms"}
+{"timestamp":"2026-10-02T00:28:35.856Z","level":"INFO","service":"payment-service","trace_id":"tr-90342","message":"HTTP GET /api/v1/catalog returned 200 OK duration=73ms"}
+{"timestamp":"2026-10-02T00:28:38.407Z","level":"INFO","service":"inventory-service","trace_id":"tr-12337","message":"Cart items calculated total: $458.00"}
+{"timestamp":"2026-10-02T00:28:39.839Z","level":"INFO","service":"api-gateway","trace_id":"tr-87090","message":"Payment intent created for amount $497.00"}
+{"timestamp":"2026-10-02T00:28:42.068Z","level":"DEBUG","service":"payment-service","trace_id":"tr-97687","message":"Payment intent created for amount $41.00"}
+{"timestamp":"2026-10-02T00:28:43.892Z","level":"INFO","service":"auth-service","trace_id":"tr-86680","message":"Cart items calculated total: $317.00"}
+{"timestamp":"2026-10-02T00:28:45.970Z","level":"DEBUG","service":"auth-service","trace_id":"tr-83105","message":"Inventory reserved item_9651 quantity=4"}
+{"timestamp":"2026-10-02T00:28:48.629Z","level":"INFO","service":"cart-service","trace_id":"tr-72240","message":"Inventory reserved item_6710 quantity=2"}
+{"timestamp":"2026-10-02T00:28:50.352Z","level":"INFO","service":"auth-service","trace_id":"tr-32045","message":"Payment intent created for amount $189.00"}
+{"timestamp":"2026-10-02T00:28:51.670Z","level":"INFO","service":"payment-service","trace_id":"tr-97277","message":"Inventory reserved item_3455 quantity=5"}
+{"timestamp":"2026-10-02T00:28:53.720Z","level":"INFO","service":"payment-service","trace_id":"tr-10743","message":"HTTP GET /api/v1/catalog returned 200 OK duration=68ms"}
+{"timestamp":"2026-10-02T00:28:55.857Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-74955","message":"Token verified for user usr_540"}
+{"timestamp":"2026-10-02T00:28:58.094Z","level":"INFO","service":"order-service","trace_id":"tr-81560","message":"HTTP GET /api/v1/catalog returned 200 OK duration=16ms"}
+{"timestamp":"2026-10-02T00:28:59.707Z","level":"INFO","service":"inventory-service","trace_id":"tr-25133","message":"Cart items calculated total: $410.00"}
+{"timestamp":"2026-10-02T00:29:02.567Z","level":"INFO","service":"api-gateway","trace_id":"tr-41828","message":"Inventory reserved item_9503 quantity=2"}
+{"timestamp":"2026-10-02T00:29:03.673Z","level":"INFO","service":"inventory-service","trace_id":"tr-51164","message":"Payment intent created for amount $357.00"}
+{"timestamp":"2026-10-02T00:29:05.755Z","level":"INFO","service":"cart-service","trace_id":"tr-82509","message":"Token verified for user usr_512"}
+{"timestamp":"2026-10-02T00:29:08.457Z","level":"INFO","service":"auth-service","trace_id":"tr-61219","message":"Payment intent created for amount $383.00"}
+{"timestamp":"2026-10-02T00:29:10.165Z","level":"INFO","service":"api-gateway","trace_id":"tr-57260","message":"Inventory reserved item_6420 quantity=3"}
+{"timestamp":"2026-10-02T00:29:12.059Z","level":"DEBUG","service":"cart-service","trace_id":"tr-71150","message":"HTTP GET /api/v1/catalog returned 200 OK duration=73ms"}
+{"timestamp":"2026-10-02T00:29:14.422Z","level":"INFO","service":"inventory-service","trace_id":"tr-31111","message":"Inventory reserved item_3370 quantity=5"}
+{"timestamp":"2026-10-02T00:29:16.642Z","level":"INFO","service":"api-gateway","trace_id":"tr-25662","message":"HTTP GET /api/v1/catalog returned 200 OK duration=40ms"}
+{"timestamp":"2026-10-02T00:29:17.889Z","level":"INFO","service":"cart-service","trace_id":"tr-96050","message":"HTTP GET /api/v1/catalog returned 200 OK duration=41ms"}
+{"timestamp":"2026-10-02T00:29:20.010Z","level":"INFO","service":"api-gateway","trace_id":"tr-92489","message":"Cart items calculated total: $105.00"}
+{"timestamp":"2026-10-02T00:29:21.958Z","level":"DEBUG","service":"auth-service","trace_id":"tr-96759","message":"Cart items calculated total: $103.00"}
+{"timestamp":"2026-10-02T00:29:24.478Z","level":"INFO","service":"inventory-service","trace_id":"tr-16230","message":"Token verified for user usr_964"}
+{"timestamp":"2026-10-02T00:29:26.098Z","level":"INFO","service":"auth-service","trace_id":"tr-16376","message":"HTTP GET /api/v1/catalog returned 200 OK duration=61ms"}
+{"timestamp":"2026-10-02T00:29:28.315Z","level":"INFO","service":"auth-service","trace_id":"tr-28342","message":"Payment intent created for amount $111.00"}
+{"timestamp":"2026-10-02T00:29:30.189Z","level":"INFO","service":"payment-service","trace_id":"tr-71145","message":"Inventory reserved item_7371 quantity=3"}
+{"timestamp":"2026-10-02T00:29:31.946Z","level":"INFO","service":"api-gateway","trace_id":"tr-58682","message":"Token verified for user usr_300"}
+{"timestamp":"2026-10-02T00:29:34.197Z","level":"DEBUG","service":"payment-service","trace_id":"tr-12493","message":"Inventory reserved item_3535 quantity=3"}
+{"timestamp":"2026-10-02T00:29:36.447Z","level":"INFO","service":"auth-service","trace_id":"tr-49523","message":"Payment intent created for amount $279.00"}
+{"timestamp":"2026-10-02T00:29:38.189Z","level":"INFO","service":"api-gateway","trace_id":"tr-64376","message":"Token verified for user usr_614"}
+{"timestamp":"2026-10-02T00:29:40.027Z","level":"INFO","service":"api-gateway","trace_id":"tr-56916","message":"Token verified for user usr_784"}
+{"timestamp":"2026-10-02T00:29:42.394Z","level":"DEBUG","service":"order-service","trace_id":"tr-97502","message":"Payment intent created for amount $465.00"}
+{"timestamp":"2026-10-02T00:29:44.436Z","level":"INFO","service":"inventory-service","trace_id":"tr-21880","message":"Inventory reserved item_4911 quantity=5"}
+{"timestamp":"2026-10-02T00:29:45.986Z","level":"INFO","service":"api-gateway","trace_id":"tr-48778","message":"Cart items calculated total: $235.00"}
+{"timestamp":"2026-10-02T00:29:47.955Z","level":"DEBUG","service":"cart-service","trace_id":"tr-69143","message":"Token verified for user usr_625"}
+{"timestamp":"2026-10-02T00:29:50.446Z","level":"INFO","service":"inventory-service","trace_id":"tr-76184","message":"Cart items calculated total: $297.00"}
+{"timestamp":"2026-10-02T00:29:52.214Z","level":"DEBUG","service":"payment-service","trace_id":"tr-15039","message":"Inventory reserved item_2474 quantity=2"}
+{"timestamp":"2026-10-02T00:29:53.835Z","level":"INFO","service":"api-gateway","trace_id":"tr-83667","message":"HTTP GET /api/v1/catalog returned 200 OK duration=21ms"}
+{"timestamp":"2026-10-02T00:29:55.930Z","level":"INFO","service":"order-service","trace_id":"tr-86276","message":"Token verified for user usr_613"}
+{"timestamp":"2026-10-02T00:29:57.958Z","level":"INFO","service":"order-service","trace_id":"tr-20227","message":"Inventory reserved item_5769 quantity=2"}
+{"timestamp":"2026-10-02T00:30:00.451Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-91279","message":"HTTP GET /api/v1/catalog returned 200 OK duration=18ms"}
+{"timestamp":"2026-10-02T00:30:02.329Z","level":"INFO","service":"auth-service","trace_id":"tr-18731","message":"HTTP GET /api/v1/catalog returned 200 OK duration=78ms"}
+{"timestamp":"2026-10-02T00:30:03.780Z","level":"DEBUG","service":"auth-service","trace_id":"tr-11989","message":"Cart items calculated total: $380.00"}
+{"timestamp":"2026-10-02T00:30:06.182Z","level":"INFO","service":"inventory-service","trace_id":"tr-84200","message":"Token verified for user usr_764"}
+{"timestamp":"2026-10-02T00:30:08.471Z","level":"INFO","service":"cart-service","trace_id":"tr-27400","message":"Cart items calculated total: $206.00"}
+{"timestamp":"2026-10-02T00:30:09.967Z","level":"INFO","service":"inventory-service","trace_id":"tr-31559","message":"Token verified for user usr_763"}
+{"timestamp":"2026-10-02T00:30:12.173Z","level":"INFO","service":"payment-service","trace_id":"tr-16742","message":"Payment intent created for amount $469.00"}
+{"timestamp":"2026-10-02T00:30:14.442Z","level":"DEBUG","service":"auth-service","trace_id":"tr-46997","message":"Inventory reserved item_1522 quantity=1"}
+{"timestamp":"2026-10-02T00:30:16.611Z","level":"INFO","service":"inventory-service","trace_id":"tr-97122","message":"Token verified for user usr_510"}
+{"timestamp":"2026-10-02T00:30:17.775Z","level":"DEBUG","service":"payment-service","trace_id":"tr-18756","message":"Token verified for user usr_775"}
+{"timestamp":"2026-10-02T00:30:19.978Z","level":"INFO","service":"payment-service","trace_id":"tr-84340","message":"Payment intent created for amount $451.00"}
+{"timestamp":"2026-10-02T00:30:22.276Z","level":"INFO","service":"order-service","trace_id":"tr-35881","message":"HTTP GET /api/v1/catalog returned 200 OK duration=69ms"}
+{"timestamp":"2026-10-02T00:30:24.451Z","level":"INFO","service":"inventory-service","trace_id":"tr-74788","message":"Inventory reserved item_4036 quantity=4"}
+{"timestamp":"2026-10-02T00:30:25.705Z","level":"INFO","service":"payment-service","trace_id":"tr-44719","message":"Cart items calculated total: $179.00"}
+{"timestamp":"2026-10-02T00:30:27.896Z","level":"INFO","service":"inventory-service","trace_id":"tr-54526","message":"Inventory reserved item_1222 quantity=1"}
+{"timestamp":"2026-10-02T00:30:30.406Z","level":"DEBUG","service":"cart-service","trace_id":"tr-61598","message":"HTTP GET /api/v1/catalog returned 200 OK duration=44ms"}
+{"timestamp":"2026-10-02T00:30:32.151Z","level":"INFO","service":"payment-service","trace_id":"tr-39071","message":"Token verified for user usr_678"}
+{"timestamp":"2026-10-02T00:30:34.251Z","level":"INFO","service":"api-gateway","trace_id":"tr-19059","message":"Payment intent created for amount $438.00"}
+{"timestamp":"2026-10-02T00:30:36.510Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-42342","message":"Inventory reserved item_2727 quantity=1"}
+{"timestamp":"2026-10-02T00:30:38.133Z","level":"INFO","service":"payment-service","trace_id":"tr-64773","message":"Payment intent created for amount $322.00"}
+{"timestamp":"2026-10-02T00:30:40.444Z","level":"INFO","service":"payment-service","trace_id":"tr-81468","message":"Cart items calculated total: $23.00"}
+{"timestamp":"2026-10-02T00:30:41.858Z","level":"INFO","service":"cart-service","trace_id":"tr-80272","message":"Inventory reserved item_7940 quantity=1"}
+{"timestamp":"2026-10-02T00:30:44.384Z","level":"DEBUG","service":"payment-service","trace_id":"tr-29389","message":"Token verified for user usr_176"}
+{"timestamp":"2026-10-02T00:30:45.989Z","level":"INFO","service":"order-service","trace_id":"tr-86537","message":"Payment intent created for amount $238.00"}
+{"timestamp":"2026-10-02T00:30:47.679Z","level":"INFO","service":"payment-service","trace_id":"tr-78604","message":"Cart items calculated total: $178.00"}
+{"timestamp":"2026-10-02T00:30:50.448Z","level":"INFO","service":"api-gateway","trace_id":"tr-30486","message":"HTTP GET /api/v1/catalog returned 200 OK duration=43ms"}
+{"timestamp":"2026-10-02T00:30:51.660Z","level":"INFO","service":"cart-service","trace_id":"tr-17984","message":"Inventory reserved item_8492 quantity=2"}
+{"timestamp":"2026-10-02T00:30:53.805Z","level":"INFO","service":"inventory-service","trace_id":"tr-62993","message":"Inventory reserved item_2776 quantity=1"}
+{"timestamp":"2026-10-02T00:30:55.795Z","level":"INFO","service":"inventory-service","trace_id":"tr-38661","message":"HTTP GET /api/v1/catalog returned 200 OK duration=61ms"}
+{"timestamp":"2026-10-02T00:30:57.927Z","level":"INFO","service":"order-service","trace_id":"tr-71444","message":"Payment intent created for amount $278.00"}
+{"timestamp":"2026-10-02T00:30:59.677Z","level":"INFO","service":"payment-service","trace_id":"tr-15921","message":"Payment intent created for amount $85.00"}
+{"timestamp":"2026-10-02T00:31:01.907Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-75576","message":"Payment intent created for amount $475.00"}
+{"timestamp":"2026-10-02T00:31:04.639Z","level":"DEBUG","service":"order-service","trace_id":"tr-38398","message":"HTTP GET /api/v1/catalog returned 200 OK duration=37ms"}
+{"timestamp":"2026-10-02T00:31:05.780Z","level":"INFO","service":"order-service","trace_id":"tr-63502","message":"Token verified for user usr_790"}
+{"timestamp":"2026-10-02T00:31:08.358Z","level":"INFO","service":"order-service","trace_id":"tr-31340","message":"Payment intent created for amount $179.00"}
+{"timestamp":"2026-10-02T00:31:10.470Z","level":"INFO","service":"auth-service","trace_id":"tr-66287","message":"Token verified for user usr_994"}
+{"timestamp":"2026-10-02T00:31:11.804Z","level":"INFO","service":"order-service","trace_id":"tr-87424","message":"Token verified for user usr_933"}
+{"timestamp":"2026-10-02T00:31:13.773Z","level":"INFO","service":"inventory-service","trace_id":"tr-88885","message":"HTTP GET /api/v1/catalog returned 200 OK duration=40ms"}
+{"timestamp":"2026-10-02T00:31:16.639Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-45318","message":"Token verified for user usr_880"}
+{"timestamp":"2026-10-02T00:31:18.541Z","level":"DEBUG","service":"auth-service","trace_id":"tr-38246","message":"Cart items calculated total: $458.00"}
+{"timestamp":"2026-10-02T00:31:19.886Z","level":"INFO","service":"payment-service","trace_id":"tr-99929","message":"Cart items calculated total: $155.00"}
+{"timestamp":"2026-10-02T00:31:22.346Z","level":"INFO","service":"cart-service","trace_id":"tr-80834","message":"Token verified for user usr_324"}
+{"timestamp":"2026-10-02T00:31:24.146Z","level":"DEBUG","service":"cart-service","trace_id":"tr-52897","message":"HTTP GET /api/v1/catalog returned 200 OK duration=22ms"}
+{"timestamp":"2026-10-02T00:31:26.598Z","level":"INFO","service":"inventory-service","trace_id":"tr-89403","message":"HTTP GET /api/v1/catalog returned 200 OK duration=28ms"}
+{"timestamp":"2026-10-02T00:31:28.566Z","level":"INFO","service":"payment-service","trace_id":"tr-81637","message":"Cart items calculated total: $340.00"}
+{"timestamp":"2026-10-02T00:31:30.490Z","level":"INFO","service":"payment-service","trace_id":"tr-15364","message":"Payment intent created for amount $212.00"}
+{"timestamp":"2026-10-02T00:31:32.487Z","level":"INFO","service":"order-service","trace_id":"tr-72055","message":"Inventory reserved item_2039 quantity=2"}
+{"timestamp":"2026-10-02T00:31:34.254Z","level":"INFO","service":"api-gateway","trace_id":"tr-50234","message":"HTTP GET /api/v1/catalog returned 200 OK duration=23ms"}
+{"timestamp":"2026-10-02T00:31:35.947Z","level":"INFO","service":"cart-service","trace_id":"tr-48808","message":"Cart items calculated total: $71.00"}
+{"timestamp":"2026-10-02T00:31:38.151Z","level":"INFO","service":"api-gateway","trace_id":"tr-75887","message":"Token verified for user usr_208"}
+{"timestamp":"2026-10-02T00:31:40.027Z","level":"INFO","service":"payment-service","trace_id":"tr-62012","message":"Token verified for user usr_220"}
+{"timestamp":"2026-10-02T00:31:42.058Z","level":"INFO","service":"api-gateway","trace_id":"tr-87401","message":"Payment intent created for amount $273.00"}
+{"timestamp":"2026-10-02T00:31:44.390Z","level":"INFO","service":"payment-service","trace_id":"tr-20406","message":"Inventory reserved item_7998 quantity=2"}
+{"timestamp":"2026-10-02T00:31:45.891Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-15381","message":"Cart items calculated total: $142.00"}
+{"timestamp":"2026-10-02T00:31:48.373Z","level":"INFO","service":"payment-service","trace_id":"tr-16384","message":"HTTP GET /api/v1/catalog returned 200 OK duration=61ms"}
+{"timestamp":"2026-10-02T00:31:49.912Z","level":"INFO","service":"auth-service","trace_id":"tr-71013","message":"Payment intent created for amount $21.00"}
+{"timestamp":"2026-10-02T00:31:51.967Z","level":"INFO","service":"order-service","trace_id":"tr-79062","message":"HTTP GET /api/v1/catalog returned 200 OK duration=39ms"}
+{"timestamp":"2026-10-02T00:31:53.739Z","level":"INFO","service":"cart-service","trace_id":"tr-92171","message":"Token verified for user usr_741"}
+{"timestamp":"2026-10-02T00:31:55.960Z","level":"INFO","service":"order-service","trace_id":"tr-71563","message":"Token verified for user usr_436"}
+{"timestamp":"2026-10-02T00:31:58.200Z","level":"INFO","service":"order-service","trace_id":"tr-52142","message":"Token verified for user usr_992"}
+{"timestamp":"2026-10-02T00:32:00.579Z","level":"INFO","service":"api-gateway","trace_id":"tr-91200","message":"HTTP GET /api/v1/catalog returned 200 OK duration=42ms"}
+{"timestamp":"2026-10-02T00:32:02.287Z","level":"INFO","service":"inventory-service","trace_id":"tr-50911","message":"Token verified for user usr_391"}
+{"timestamp":"2026-10-02T00:32:03.948Z","level":"INFO","service":"order-service","trace_id":"tr-75184","message":"Inventory reserved item_8744 quantity=4"}
+{"timestamp":"2026-10-02T00:32:06.464Z","level":"INFO","service":"cart-service","trace_id":"tr-67989","message":"HTTP GET /api/v1/catalog returned 200 OK duration=68ms"}
+{"timestamp":"2026-10-02T00:32:07.832Z","level":"DEBUG","service":"order-service","trace_id":"tr-21294","message":"Cart items calculated total: $269.00"}
+{"timestamp":"2026-10-02T00:32:09.934Z","level":"INFO","service":"inventory-service","trace_id":"tr-99577","message":"Token verified for user usr_281"}
+{"timestamp":"2026-10-02T00:32:12.171Z","level":"INFO","service":"payment-service","trace_id":"tr-12495","message":"Token verified for user usr_466"}
+{"timestamp":"2026-10-02T00:32:14.572Z","level":"INFO","service":"inventory-service","trace_id":"tr-21035","message":"Inventory reserved item_6705 quantity=5"}
+{"timestamp":"2026-10-02T00:32:16.226Z","level":"DEBUG","service":"order-service","trace_id":"tr-59651","message":"Payment intent created for amount $479.00"}
+{"timestamp":"2026-10-02T00:32:18.564Z","level":"INFO","service":"order-service","trace_id":"tr-67967","message":"Token verified for user usr_534"}
+{"timestamp":"2026-10-02T00:32:20.302Z","level":"DEBUG","service":"cart-service","trace_id":"tr-54056","message":"Token verified for user usr_751"}
+{"timestamp":"2026-10-02T00:32:22.042Z","level":"INFO","service":"inventory-service","trace_id":"tr-84658","message":"Inventory reserved item_7258 quantity=1"}
+{"timestamp":"2026-10-02T00:32:23.807Z","level":"INFO","service":"inventory-service","trace_id":"tr-43560","message":"HTTP GET /api/v1/catalog returned 200 OK duration=56ms"}
+{"timestamp":"2026-10-02T00:32:26.186Z","level":"INFO","service":"api-gateway","trace_id":"tr-39742","message":"HTTP GET /api/v1/catalog returned 200 OK duration=65ms"}
+{"timestamp":"2026-10-02T00:32:27.931Z","level":"INFO","service":"api-gateway","trace_id":"tr-60886","message":"HTTP GET /api/v1/catalog returned 200 OK duration=37ms"}
+{"timestamp":"2026-10-02T00:32:29.693Z","level":"INFO","service":"auth-service","trace_id":"tr-90815","message":"Payment intent created for amount $123.00"}
+{"timestamp":"2026-10-02T00:32:32.014Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-10201","message":"Cart items calculated total: $490.00"}
+{"timestamp":"2026-10-02T00:32:34.564Z","level":"INFO","service":"auth-service","trace_id":"tr-75993","message":"Cart items calculated total: $75.00"}
+{"timestamp":"2026-10-02T00:32:36.078Z","level":"INFO","service":"api-gateway","trace_id":"tr-91954","message":"HTTP GET /api/v1/catalog returned 200 OK duration=18ms"}
+{"timestamp":"2026-10-02T00:32:38.090Z","level":"INFO","service":"cart-service","trace_id":"tr-89160","message":"Cart items calculated total: $198.00"}
+{"timestamp":"2026-10-02T00:32:39.682Z","level":"INFO","service":"payment-service","trace_id":"tr-28756","message":"Payment intent created for amount $191.00"}
+{"timestamp":"2026-10-02T00:32:42.381Z","level":"INFO","service":"inventory-service","trace_id":"tr-55202","message":"Inventory reserved item_7714 quantity=4"}
+{"timestamp":"2026-10-02T00:32:44.315Z","level":"INFO","service":"inventory-service","trace_id":"tr-94982","message":"Token verified for user usr_226"}
+{"timestamp":"2026-10-02T00:32:46.140Z","level":"INFO","service":"payment-service","trace_id":"tr-95922","message":"HTTP GET /api/v1/catalog returned 200 OK duration=80ms"}
+{"timestamp":"2026-10-02T00:32:48.605Z","level":"INFO","service":"auth-service","trace_id":"tr-70373","message":"Payment intent created for amount $105.00"}
+{"timestamp":"2026-10-02T00:32:50.008Z","level":"DEBUG","service":"payment-service","trace_id":"tr-55686","message":"Payment intent created for amount $186.00"}
+{"timestamp":"2026-10-02T00:32:52.501Z","level":"INFO","service":"api-gateway","trace_id":"tr-18815","message":"Cart items calculated total: $201.00"}
+{"timestamp":"2026-10-02T00:32:54.120Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-96187","message":"Inventory reserved item_8342 quantity=1"}
+{"timestamp":"2026-10-02T00:32:56.071Z","level":"INFO","service":"cart-service","trace_id":"tr-11766","message":"Token verified for user usr_763"}
+{"timestamp":"2026-10-02T00:32:57.872Z","level":"INFO","service":"payment-service","trace_id":"tr-75984","message":"Token verified for user usr_973"}
+{"timestamp":"2026-10-02T00:33:00.195Z","level":"INFO","service":"api-gateway","trace_id":"tr-17227","message":"Cart items calculated total: $353.00"}
+{"timestamp":"2026-10-02T00:33:01.764Z","level":"INFO","service":"order-service","trace_id":"tr-30448","message":"Cart items calculated total: $484.00"}
+{"timestamp":"2026-10-02T00:33:03.928Z","level":"INFO","service":"payment-service","trace_id":"tr-38211","message":"Token verified for user usr_422"}
+{"timestamp":"2026-10-02T00:33:06.201Z","level":"INFO","service":"order-service","trace_id":"tr-36218","message":"Payment intent created for amount $404.00"}
+{"timestamp":"2026-10-02T00:33:08.332Z","level":"INFO","service":"auth-service","trace_id":"tr-38871","message":"Payment intent created for amount $107.00"}
+{"timestamp":"2026-10-02T00:33:10.026Z","level":"INFO","service":"cart-service","trace_id":"tr-93254","message":"Payment intent created for amount $361.00"}
+{"timestamp":"2026-10-02T00:33:12.240Z","level":"INFO","service":"payment-service","trace_id":"tr-90316","message":"HTTP GET /api/v1/catalog returned 200 OK duration=16ms"}
+{"timestamp":"2026-10-02T00:33:13.973Z","level":"DEBUG","service":"order-service","trace_id":"tr-50282","message":"Inventory reserved item_9472 quantity=3"}
+{"timestamp":"2026-10-02T00:33:16.431Z","level":"INFO","service":"order-service","trace_id":"tr-62025","message":"HTTP GET /api/v1/catalog returned 200 OK duration=30ms"}
+{"timestamp":"2026-10-02T00:33:18.272Z","level":"INFO","service":"api-gateway","trace_id":"tr-91534","message":"HTTP GET /api/v1/catalog returned 200 OK duration=36ms"}
+{"timestamp":"2026-10-02T00:33:20.367Z","level":"INFO","service":"inventory-service","trace_id":"tr-97019","message":"Payment intent created for amount $17.00"}
+{"timestamp":"2026-10-02T00:33:21.925Z","level":"INFO","service":"payment-service","trace_id":"tr-70523","message":"Inventory reserved item_2776 quantity=1"}
+{"timestamp":"2026-10-02T00:33:24.374Z","level":"DEBUG","service":"cart-service","trace_id":"tr-89993","message":"Payment intent created for amount $486.00"}
+{"timestamp":"2026-10-02T00:33:26.572Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-20729","message":"HTTP GET /api/v1/catalog returned 200 OK duration=76ms"}
+{"timestamp":"2026-10-02T00:33:27.987Z","level":"INFO","service":"cart-service","trace_id":"tr-28373","message":"HTTP GET /api/v1/catalog returned 200 OK duration=25ms"}
+{"timestamp":"2026-10-02T00:33:29.956Z","level":"INFO","service":"cart-service","trace_id":"tr-99099","message":"Token verified for user usr_579"}
+{"timestamp":"2026-10-02T00:33:32.263Z","level":"DEBUG","service":"cart-service","trace_id":"tr-70625","message":"Cart items calculated total: $100.00"}
+{"timestamp":"2026-10-02T00:33:33.780Z","level":"DEBUG","service":"cart-service","trace_id":"tr-24036","message":"Token verified for user usr_967"}
+{"timestamp":"2026-10-02T00:33:36.525Z","level":"INFO","service":"inventory-service","trace_id":"tr-31601","message":"Inventory reserved item_6453 quantity=5"}
+{"timestamp":"2026-10-02T00:33:37.683Z","level":"INFO","service":"cart-service","trace_id":"tr-60597","message":"Cart items calculated total: $181.00"}
+{"timestamp":"2026-10-02T00:33:40.105Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-10140","message":"Cart items calculated total: $487.00"}
+{"timestamp":"2026-10-02T00:33:42.090Z","level":"INFO","service":"order-service","trace_id":"tr-84694","message":"HTTP GET /api/v1/catalog returned 200 OK duration=36ms"}
+{"timestamp":"2026-10-02T00:33:44.601Z","level":"DEBUG","service":"payment-service","trace_id":"tr-64496","message":"HTTP GET /api/v1/catalog returned 200 OK duration=67ms"}
+{"timestamp":"2026-10-02T00:33:46.200Z","level":"DEBUG","service":"order-service","trace_id":"tr-51462","message":"Inventory reserved item_6926 quantity=1"}
+{"timestamp":"2026-10-02T00:33:47.801Z","level":"INFO","service":"inventory-service","trace_id":"tr-91618","message":"Inventory reserved item_5498 quantity=3"}
+{"timestamp":"2026-10-02T00:33:49.738Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-22103","message":"Token verified for user usr_527"}
+{"timestamp":"2026-10-02T00:33:51.806Z","level":"INFO","service":"api-gateway","trace_id":"tr-78503","message":"HTTP GET /api/v1/catalog returned 200 OK duration=48ms"}
+{"timestamp":"2026-10-02T00:33:54.589Z","level":"DEBUG","service":"payment-service","trace_id":"tr-89481","message":"Token verified for user usr_695"}
+{"timestamp":"2026-10-02T00:33:56.187Z","level":"INFO","service":"cart-service","trace_id":"tr-32471","message":"Token verified for user usr_757"}
+{"timestamp":"2026-10-02T00:33:57.765Z","level":"INFO","service":"api-gateway","trace_id":"tr-86804","message":"HTTP GET /api/v1/catalog returned 200 OK duration=51ms"}
+{"timestamp":"2026-10-02T00:33:59.995Z","level":"INFO","service":"auth-service","trace_id":"tr-23564","message":"HTTP GET /api/v1/catalog returned 200 OK duration=45ms"}
+{"timestamp":"2026-10-02T00:34:02.098Z","level":"INFO","service":"payment-service","trace_id":"tr-11204","message":"Inventory reserved item_8081 quantity=1"}
+{"timestamp":"2026-10-02T00:34:04.379Z","level":"INFO","service":"auth-service","trace_id":"tr-61374","message":"Token verified for user usr_323"}
+{"timestamp":"2026-10-02T00:34:05.690Z","level":"INFO","service":"order-service","trace_id":"tr-73778","message":"Token verified for user usr_933"}
+{"timestamp":"2026-10-02T00:34:08.378Z","level":"INFO","service":"order-service","trace_id":"tr-82787","message":"Token verified for user usr_693"}
+{"timestamp":"2026-10-02T00:34:10.550Z","level":"INFO","service":"payment-service","trace_id":"tr-10115","message":"Inventory reserved item_7951 quantity=1"}
+{"timestamp":"2026-10-02T00:34:12.225Z","level":"INFO","service":"payment-service","trace_id":"tr-77330","message":"Inventory reserved item_3346 quantity=5"}
+{"timestamp":"2026-10-02T00:34:13.723Z","level":"INFO","service":"auth-service","trace_id":"tr-43336","message":"Payment intent created for amount $372.00"}
+{"timestamp":"2026-10-02T00:34:15.723Z","level":"INFO","service":"auth-service","trace_id":"tr-65046","message":"Cart items calculated total: $330.00"}
+{"timestamp":"2026-10-02T00:34:18.620Z","level":"INFO","service":"order-service","trace_id":"tr-43805","message":"Token verified for user usr_461"}
+{"timestamp":"2026-10-02T00:34:20.549Z","level":"INFO","service":"api-gateway","trace_id":"tr-32790","message":"Cart items calculated total: $274.00"}
+{"timestamp":"2026-10-02T00:34:21.762Z","level":"INFO","service":"payment-service","trace_id":"tr-17428","message":"Payment intent created for amount $232.00"}
+{"timestamp":"2026-10-02T00:34:23.728Z","level":"INFO","service":"api-gateway","trace_id":"tr-51626","message":"Cart items calculated total: $145.00"}
+{"timestamp":"2026-10-02T00:34:26.445Z","level":"INFO","service":"payment-service","trace_id":"tr-42861","message":"Payment intent created for amount $445.00"}
+{"timestamp":"2026-10-02T00:34:27.788Z","level":"DEBUG","service":"cart-service","trace_id":"tr-63147","message":"Payment intent created for amount $463.00"}
+{"timestamp":"2026-10-02T00:34:29.685Z","level":"INFO","service":"auth-service","trace_id":"tr-71861","message":"HTTP GET /api/v1/catalog returned 200 OK duration=24ms"}
+{"timestamp":"2026-10-02T00:34:32.513Z","level":"INFO","service":"api-gateway","trace_id":"tr-80302","message":"Cart items calculated total: $157.00"}
+{"timestamp":"2026-10-02T00:34:34.495Z","level":"INFO","service":"api-gateway","trace_id":"tr-35065","message":"Payment intent created for amount $236.00"}
+{"timestamp":"2026-10-02T00:34:36.366Z","level":"INFO","service":"inventory-service","trace_id":"tr-85134","message":"Payment intent created for amount $428.00"}
+{"timestamp":"2026-10-02T00:34:38.403Z","level":"INFO","service":"api-gateway","trace_id":"tr-36805","message":"Inventory reserved item_9092 quantity=1"}
+{"timestamp":"2026-10-02T00:34:39.854Z","level":"DEBUG","service":"payment-service","trace_id":"tr-83760","message":"Payment intent created for amount $33.00"}
+{"timestamp":"2026-10-02T00:34:41.863Z","level":"ERROR","service":"payment-service","trace_id":"tr-90759","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:34:44.588Z","level":"ERROR","service":"payment-service","trace_id":"tr-75297","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:34:46.175Z","level":"ERROR","service":"payment-service","trace_id":"tr-22681","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:34:48.552Z","level":"ERROR","service":"payment-service","trace_id":"tr-43278","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:34:50.174Z","level":"ERROR","service":"order-service","trace_id":"tr-78775","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:34:51.931Z","level":"ERROR","service":"order-service","trace_id":"tr-23332","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:34:54.322Z","level":"INFO","service":"auth-service","trace_id":"tr-83104","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:34:56.552Z","level":"ERROR","service":"payment-service","trace_id":"tr-27916","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:34:58.038Z","level":"ERROR","service":"payment-service","trace_id":"tr-64302","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:00.055Z","level":"ERROR","service":"order-service","trace_id":"tr-46364","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:02.125Z","level":"INFO","service":"inventory-service","trace_id":"tr-72449","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:35:04.455Z","level":"ERROR","service":"payment-service","trace_id":"tr-39503","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:06.170Z","level":"ERROR","service":"payment-service","trace_id":"tr-56955","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:08.101Z","level":"ERROR","service":"payment-service","trace_id":"tr-76791","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:10.648Z","level":"ERROR","service":"payment-service","trace_id":"tr-63098","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:12.223Z","level":"WARN","service":"api-gateway","trace_id":"tr-36411","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:35:14.245Z","level":"INFO","service":"inventory-service","trace_id":"tr-48236","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:35:16.557Z","level":"ERROR","service":"payment-service","trace_id":"tr-71101","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:17.703Z","level":"ERROR","service":"order-service","trace_id":"tr-84353","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:19.975Z","level":"ERROR","service":"order-service","trace_id":"tr-39181","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:22.522Z","level":"ERROR","service":"payment-service","trace_id":"tr-17128","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:24.609Z","level":"ERROR","service":"order-service","trace_id":"tr-91043","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:25.795Z","level":"ERROR","service":"payment-service","trace_id":"tr-41607","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:28.341Z","level":"ERROR","service":"order-service","trace_id":"tr-68946","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:30.130Z","level":"ERROR","service":"payment-service","trace_id":"tr-89804","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:32.341Z","level":"ERROR","service":"payment-service","trace_id":"tr-24588","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:34.546Z","level":"ERROR","service":"payment-service","trace_id":"tr-23074","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:36.449Z","level":"ERROR","service":"order-service","trace_id":"tr-65661","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:37.990Z","level":"ERROR","service":"payment-service","trace_id":"tr-82490","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:39.970Z","level":"ERROR","service":"order-service","trace_id":"tr-63039","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:41.778Z","level":"ERROR","service":"payment-service","trace_id":"tr-58754","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:44.469Z","level":"ERROR","service":"payment-service","trace_id":"tr-90353","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:45.958Z","level":"INFO","service":"auth-service","trace_id":"tr-77692","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:35:48.519Z","level":"ERROR","service":"order-service","trace_id":"tr-31674","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:50.093Z","level":"ERROR","service":"payment-service","trace_id":"tr-69316","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:52.518Z","level":"ERROR","service":"order-service","trace_id":"tr-26679","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:54.458Z","level":"ERROR","service":"payment-service","trace_id":"tr-85279","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:35:56.504Z","level":"ERROR","service":"order-service","trace_id":"tr-32518","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:35:58.263Z","level":"ERROR","service":"order-service","trace_id":"tr-97391","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:00.458Z","level":"ERROR","service":"payment-service","trace_id":"tr-65385","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:02.331Z","level":"ERROR","service":"payment-service","trace_id":"tr-10694","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:03.754Z","level":"ERROR","service":"payment-service","trace_id":"tr-74041","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:06.288Z","level":"ERROR","service":"order-service","trace_id":"tr-44845","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:08.623Z","level":"INFO","service":"inventory-service","trace_id":"tr-32655","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:36:10.317Z","level":"ERROR","service":"payment-service","trace_id":"tr-74909","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:11.703Z","level":"ERROR","service":"payment-service","trace_id":"tr-28026","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:13.770Z","level":"ERROR","service":"order-service","trace_id":"tr-27829","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:16.082Z","level":"ERROR","service":"payment-service","trace_id":"tr-20594","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:18.564Z","level":"ERROR","service":"order-service","trace_id":"tr-36938","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:20.652Z","level":"ERROR","service":"payment-service","trace_id":"tr-36878","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:22.431Z","level":"ERROR","service":"order-service","trace_id":"tr-82966","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:24.553Z","level":"ERROR","service":"payment-service","trace_id":"tr-79850","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:26.391Z","level":"WARN","service":"api-gateway","trace_id":"tr-69265","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:36:27.759Z","level":"ERROR","service":"payment-service","trace_id":"tr-58293","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:29.668Z","level":"ERROR","service":"order-service","trace_id":"tr-98057","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:31.886Z","level":"ERROR","service":"order-service","trace_id":"tr-79234","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:33.869Z","level":"ERROR","service":"payment-service","trace_id":"tr-59171","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:36.128Z","level":"WARN","service":"api-gateway","trace_id":"tr-69016","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:36:37.925Z","level":"INFO","service":"auth-service","trace_id":"tr-87036","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:36:40.229Z","level":"ERROR","service":"payment-service","trace_id":"tr-64381","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:42.446Z","level":"WARN","service":"api-gateway","trace_id":"tr-97386","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:36:43.683Z","level":"ERROR","service":"order-service","trace_id":"tr-10307","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:46.331Z","level":"ERROR","service":"payment-service","trace_id":"tr-39619","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:48.489Z","level":"ERROR","service":"payment-service","trace_id":"tr-89485","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:50.501Z","level":"WARN","service":"api-gateway","trace_id":"tr-43156","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:36:51.906Z","level":"ERROR","service":"order-service","trace_id":"tr-77569","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:36:53.853Z","level":"INFO","service":"inventory-service","trace_id":"tr-41114","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:36:55.914Z","level":"ERROR","service":"payment-service","trace_id":"tr-97297","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:36:57.706Z","level":"ERROR","service":"payment-service","trace_id":"tr-69503","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:00.394Z","level":"ERROR","service":"payment-service","trace_id":"tr-47767","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:02.278Z","level":"WARN","service":"api-gateway","trace_id":"tr-89726","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:37:04.555Z","level":"ERROR","service":"payment-service","trace_id":"tr-49609","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:06.092Z","level":"ERROR","service":"payment-service","trace_id":"tr-94003","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:08.259Z","level":"ERROR","service":"payment-service","trace_id":"tr-42967","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:09.941Z","level":"ERROR","service":"order-service","trace_id":"tr-89111","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:12.527Z","level":"WARN","service":"api-gateway","trace_id":"tr-56737","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:37:14.528Z","level":"ERROR","service":"order-service","trace_id":"tr-68891","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:15.766Z","level":"INFO","service":"auth-service","trace_id":"tr-30227","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:17.723Z","level":"INFO","service":"inventory-service","trace_id":"tr-37350","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:20.476Z","level":"INFO","service":"auth-service","trace_id":"tr-30426","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:22.136Z","level":"INFO","service":"inventory-service","trace_id":"tr-85733","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:23.715Z","level":"ERROR","service":"payment-service","trace_id":"tr-24167","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:25.819Z","level":"ERROR","service":"payment-service","trace_id":"tr-20426","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:28.478Z","level":"ERROR","service":"payment-service","trace_id":"tr-54807","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:30.334Z","level":"ERROR","service":"payment-service","trace_id":"tr-97005","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:32.414Z","level":"ERROR","service":"payment-service","trace_id":"tr-66597","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:33.905Z","level":"INFO","service":"auth-service","trace_id":"tr-25601","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:36.067Z","level":"ERROR","service":"payment-service","trace_id":"tr-66694","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:38.423Z","level":"WARN","service":"api-gateway","trace_id":"tr-21192","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:37:40.473Z","level":"ERROR","service":"order-service","trace_id":"tr-59311","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:42.024Z","level":"WARN","service":"api-gateway","trace_id":"tr-69273","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:37:44.560Z","level":"ERROR","service":"order-service","trace_id":"tr-83446","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:46.263Z","level":"INFO","service":"auth-service","trace_id":"tr-58656","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:37:48.524Z","level":"ERROR","service":"payment-service","trace_id":"tr-26314","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:49.794Z","level":"ERROR","service":"order-service","trace_id":"tr-51667","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:52.384Z","level":"ERROR","service":"order-service","trace_id":"tr-96288","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:37:54.136Z","level":"ERROR","service":"payment-service","trace_id":"tr-90592","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:56.547Z","level":"ERROR","service":"payment-service","trace_id":"tr-56110","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:37:58.337Z","level":"INFO","service":"auth-service","trace_id":"tr-44817","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:00.504Z","level":"WARN","service":"api-gateway","trace_id":"tr-45052","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:38:01.681Z","level":"INFO","service":"inventory-service","trace_id":"tr-65577","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:04.462Z","level":"ERROR","service":"payment-service","trace_id":"tr-20015","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:05.824Z","level":"INFO","service":"auth-service","trace_id":"tr-22498","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:07.719Z","level":"ERROR","service":"payment-service","trace_id":"tr-38854","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:10.550Z","level":"ERROR","service":"payment-service","trace_id":"tr-57565","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:12.231Z","level":"ERROR","service":"payment-service","trace_id":"tr-51882","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:13.888Z","level":"ERROR","service":"payment-service","trace_id":"tr-85187","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:16.451Z","level":"ERROR","service":"order-service","trace_id":"tr-43130","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:18.533Z","level":"ERROR","service":"payment-service","trace_id":"tr-63666","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:20.027Z","level":"ERROR","service":"order-service","trace_id":"tr-60725","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:21.698Z","level":"WARN","service":"api-gateway","trace_id":"tr-17524","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:38:24.437Z","level":"ERROR","service":"order-service","trace_id":"tr-99333","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:26.605Z","level":"ERROR","service":"payment-service","trace_id":"tr-37616","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:28.120Z","level":"WARN","service":"api-gateway","trace_id":"tr-10000","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:38:30.197Z","level":"INFO","service":"auth-service","trace_id":"tr-42751","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:32.628Z","level":"INFO","service":"inventory-service","trace_id":"tr-94878","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:34.646Z","level":"ERROR","service":"payment-service","trace_id":"tr-29632","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:36.018Z","level":"ERROR","service":"order-service","trace_id":"tr-44217","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:38.024Z","level":"ERROR","service":"payment-service","trace_id":"tr-50244","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:40.563Z","level":"ERROR","service":"payment-service","trace_id":"tr-84225","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:41.752Z","level":"WARN","service":"api-gateway","trace_id":"tr-42363","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:38:43.956Z","level":"ERROR","service":"payment-service","trace_id":"tr-57201","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:46.388Z","level":"ERROR","service":"order-service","trace_id":"tr-26322","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:48.018Z","level":"INFO","service":"inventory-service","trace_id":"tr-58708","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:50.193Z","level":"WARN","service":"api-gateway","trace_id":"tr-88884","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:38:52.382Z","level":"ERROR","service":"payment-service","trace_id":"tr-43648","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:38:54.358Z","level":"INFO","service":"auth-service","trace_id":"tr-66557","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:38:56.486Z","level":"ERROR","service":"order-service","trace_id":"tr-35500","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:38:57.739Z","level":"WARN","service":"api-gateway","trace_id":"tr-23270","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:39:00.234Z","level":"ERROR","service":"order-service","trace_id":"tr-66776","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:02.472Z","level":"ERROR","service":"payment-service","trace_id":"tr-50406","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:04.240Z","level":"WARN","service":"api-gateway","trace_id":"tr-27879","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:39:06.454Z","level":"WARN","service":"api-gateway","trace_id":"tr-98332","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:39:08.284Z","level":"INFO","service":"auth-service","trace_id":"tr-12935","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:39:10.359Z","level":"ERROR","service":"payment-service","trace_id":"tr-46565","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:12.185Z","level":"ERROR","service":"order-service","trace_id":"tr-30056","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:13.751Z","level":"ERROR","service":"payment-service","trace_id":"tr-14747","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:16.292Z","level":"ERROR","service":"payment-service","trace_id":"tr-74820","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:18.257Z","level":"ERROR","service":"payment-service","trace_id":"tr-96507","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:20.318Z","level":"INFO","service":"inventory-service","trace_id":"tr-91793","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:39:21.659Z","level":"ERROR","service":"order-service","trace_id":"tr-23981","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:24.269Z","level":"ERROR","service":"payment-service","trace_id":"tr-92409","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:26.257Z","level":"ERROR","service":"order-service","trace_id":"tr-23509","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:28.396Z","level":"ERROR","service":"payment-service","trace_id":"tr-71634","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:30.133Z","level":"ERROR","service":"payment-service","trace_id":"tr-65972","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:32.532Z","level":"INFO","service":"auth-service","trace_id":"tr-26192","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:39:33.759Z","level":"ERROR","service":"order-service","trace_id":"tr-70941","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:36.249Z","level":"ERROR","service":"order-service","trace_id":"tr-78242","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:38.535Z","level":"ERROR","service":"payment-service","trace_id":"tr-65410","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:40.313Z","level":"ERROR","service":"order-service","trace_id":"tr-60574","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:41.967Z","level":"ERROR","service":"order-service","trace_id":"tr-82894","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:44.001Z","level":"ERROR","service":"order-service","trace_id":"tr-31754","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:45.777Z","level":"ERROR","service":"payment-service","trace_id":"tr-59680","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:48.167Z","level":"ERROR","service":"payment-service","trace_id":"tr-90113","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:49.954Z","level":"ERROR","service":"order-service","trace_id":"tr-83029","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:39:51.858Z","level":"INFO","service":"auth-service","trace_id":"tr-73739","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:39:54.474Z","level":"ERROR","service":"payment-service","trace_id":"tr-82044","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:39:55.723Z","level":"WARN","service":"api-gateway","trace_id":"tr-40315","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:39:58.301Z","level":"ERROR","service":"order-service","trace_id":"tr-90888","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:00.438Z","level":"ERROR","service":"payment-service","trace_id":"tr-55435","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:40:02.390Z","level":"ERROR","service":"payment-service","trace_id":"tr-68183","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:40:04.512Z","level":"ERROR","service":"order-service","trace_id":"tr-87549","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:06.183Z","level":"ERROR","service":"payment-service","trace_id":"tr-62191","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:40:08.439Z","level":"ERROR","service":"order-service","trace_id":"tr-72355","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:10.402Z","level":"ERROR","service":"order-service","trace_id":"tr-27482","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:11.705Z","level":"WARN","service":"api-gateway","trace_id":"tr-33430","status_code":502,"message":"POST /api/v1/checkout upstream error HTTP 502"}
+{"timestamp":"2026-10-02T00:40:14.107Z","level":"ERROR","service":"order-service","trace_id":"tr-10847","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:15.843Z","level":"INFO","service":"inventory-service","trace_id":"tr-26930","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:40:18.062Z","level":"ERROR","service":"payment-service","trace_id":"tr-66281","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:40:20.164Z","level":"INFO","service":"inventory-service","trace_id":"tr-72428","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:40:21.832Z","level":"INFO","service":"inventory-service","trace_id":"tr-96968","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:40:24.011Z","level":"WARN","service":"api-gateway","trace_id":"tr-86006","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:40:25.990Z","level":"WARN","service":"api-gateway","trace_id":"tr-57794","status_code":504,"message":"POST /api/v1/checkout upstream error HTTP 504"}
+{"timestamp":"2026-10-02T00:40:28.123Z","level":"INFO","service":"inventory-service","trace_id":"tr-13074","message":"Processed read event successfully"}
+{"timestamp":"2026-10-02T00:40:30.597Z","level":"ERROR","service":"payment-service","trace_id":"tr-26616","message":"HikariPool-1 - Connection is not available, request timed out after 30000ms.","exception":"java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available"}
+{"timestamp":"2026-10-02T00:40:32.080Z","level":"ERROR","service":"order-service","trace_id":"tr-46134","message":"Call to http://payment-service:8080/v1/charge failed: 504 Gateway Timeout","circuit_breaker":"OPEN"}
+{"timestamp":"2026-10-02T00:40:33.806Z","level":"INFO","service":"payment-service","trace_id":"tr-98415","message":"Cart items calculated total: $399.00"}
+{"timestamp":"2026-10-02T00:40:36.561Z","level":"INFO","service":"payment-service","trace_id":"tr-93331","message":"Cart items calculated total: $54.00"}
+{"timestamp":"2026-10-02T00:40:37.973Z","level":"INFO","service":"auth-service","trace_id":"tr-27199","message":"Inventory reserved item_2693 quantity=3"}
+{"timestamp":"2026-10-02T00:40:40.487Z","level":"INFO","service":"cart-service","trace_id":"tr-18611","message":"Inventory reserved item_9520 quantity=1"}
+{"timestamp":"2026-10-02T00:40:42.608Z","level":"INFO","service":"inventory-service","trace_id":"tr-88407","message":"HTTP GET /api/v1/catalog returned 200 OK duration=61ms"}
+{"timestamp":"2026-10-02T00:40:44.504Z","level":"INFO","service":"payment-service","trace_id":"tr-32305","message":"HTTP GET /api/v1/catalog returned 200 OK duration=16ms"}
+{"timestamp":"2026-10-02T00:40:45.834Z","level":"INFO","service":"auth-service","trace_id":"tr-51372","message":"Token verified for user usr_118"}
+{"timestamp":"2026-10-02T00:40:48.501Z","level":"DEBUG","service":"cart-service","trace_id":"tr-79288","message":"Inventory reserved item_5424 quantity=5"}
+{"timestamp":"2026-10-02T00:40:50.366Z","level":"INFO","service":"inventory-service","trace_id":"tr-51913","message":"Token verified for user usr_443"}
+{"timestamp":"2026-10-02T00:40:52.083Z","level":"INFO","service":"payment-service","trace_id":"tr-76445","message":"Cart items calculated total: $245.00"}
+{"timestamp":"2026-10-02T00:40:53.910Z","level":"INFO","service":"auth-service","trace_id":"tr-69846","message":"Cart items calculated total: $15.00"}
+{"timestamp":"2026-10-02T00:40:55.887Z","level":"INFO","service":"inventory-service","trace_id":"tr-68566","message":"HTTP GET /api/v1/catalog returned 200 OK duration=72ms"}
+{"timestamp":"2026-10-02T00:40:57.897Z","level":"INFO","service":"inventory-service","trace_id":"tr-87438","message":"Inventory reserved item_2863 quantity=1"}
+{"timestamp":"2026-10-02T00:40:59.788Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-74841","message":"Inventory reserved item_8307 quantity=3"}
+{"timestamp":"2026-10-02T00:41:02.266Z","level":"INFO","service":"api-gateway","trace_id":"tr-18570","message":"Inventory reserved item_3583 quantity=4"}
+{"timestamp":"2026-10-02T00:41:04.173Z","level":"INFO","service":"inventory-service","trace_id":"tr-37552","message":"Payment intent created for amount $271.00"}
+{"timestamp":"2026-10-02T00:41:06.652Z","level":"INFO","service":"api-gateway","trace_id":"tr-82102","message":"Token verified for user usr_791"}
+{"timestamp":"2026-10-02T00:41:07.701Z","level":"INFO","service":"payment-service","trace_id":"tr-89112","message":"Inventory reserved item_4870 quantity=2"}
+{"timestamp":"2026-10-02T00:41:10.030Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-56327","message":"Cart items calculated total: $462.00"}
+{"timestamp":"2026-10-02T00:41:12.439Z","level":"INFO","service":"auth-service","trace_id":"tr-35575","message":"HTTP GET /api/v1/catalog returned 200 OK duration=43ms"}
+{"timestamp":"2026-10-02T00:41:14.595Z","level":"INFO","service":"cart-service","trace_id":"tr-51755","message":"Cart items calculated total: $275.00"}
+{"timestamp":"2026-10-02T00:41:15.850Z","level":"INFO","service":"order-service","trace_id":"tr-10628","message":"Cart items calculated total: $435.00"}
+{"timestamp":"2026-10-02T00:41:17.942Z","level":"INFO","service":"payment-service","trace_id":"tr-94965","message":"Inventory reserved item_1844 quantity=3"}
+{"timestamp":"2026-10-02T00:41:20.410Z","level":"DEBUG","service":"payment-service","trace_id":"tr-87915","message":"Inventory reserved item_8455 quantity=3"}
+{"timestamp":"2026-10-02T00:41:22.368Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-72259","message":"Cart items calculated total: $388.00"}
+{"timestamp":"2026-10-02T00:41:24.256Z","level":"DEBUG","service":"cart-service","trace_id":"tr-36690","message":"HTTP GET /api/v1/catalog returned 200 OK duration=53ms"}
+{"timestamp":"2026-10-02T00:41:26.406Z","level":"INFO","service":"order-service","trace_id":"tr-28617","message":"Payment intent created for amount $184.00"}
+{"timestamp":"2026-10-02T00:41:28.213Z","level":"INFO","service":"order-service","trace_id":"tr-33140","message":"Cart items calculated total: $139.00"}
+{"timestamp":"2026-10-02T00:41:29.875Z","level":"INFO","service":"auth-service","trace_id":"tr-32368","message":"Cart items calculated total: $93.00"}
+{"timestamp":"2026-10-02T00:41:31.698Z","level":"INFO","service":"inventory-service","trace_id":"tr-45217","message":"HTTP GET /api/v1/catalog returned 200 OK duration=23ms"}
+{"timestamp":"2026-10-02T00:41:34.024Z","level":"INFO","service":"inventory-service","trace_id":"tr-61730","message":"HTTP GET /api/v1/catalog returned 200 OK duration=63ms"}
+{"timestamp":"2026-10-02T00:41:36.405Z","level":"INFO","service":"cart-service","trace_id":"tr-69863","message":"Token verified for user usr_860"}
+{"timestamp":"2026-10-02T00:41:38.544Z","level":"INFO","service":"auth-service","trace_id":"tr-98285","message":"Token verified for user usr_897"}
+{"timestamp":"2026-10-02T00:41:40.558Z","level":"INFO","service":"order-service","trace_id":"tr-64195","message":"Token verified for user usr_234"}
+{"timestamp":"2026-10-02T00:41:42.104Z","level":"INFO","service":"payment-service","trace_id":"tr-75279","message":"Inventory reserved item_9589 quantity=2"}
+{"timestamp":"2026-10-02T00:41:43.806Z","level":"DEBUG","service":"payment-service","trace_id":"tr-65033","message":"Inventory reserved item_6479 quantity=5"}
+{"timestamp":"2026-10-02T00:41:46.413Z","level":"INFO","service":"payment-service","trace_id":"tr-81023","message":"HTTP GET /api/v1/catalog returned 200 OK duration=61ms"}
+{"timestamp":"2026-10-02T00:41:48.380Z","level":"INFO","service":"cart-service","trace_id":"tr-12682","message":"HTTP GET /api/v1/catalog returned 200 OK duration=42ms"}
+{"timestamp":"2026-10-02T00:41:50.175Z","level":"INFO","service":"order-service","trace_id":"tr-28101","message":"Cart items calculated total: $405.00"}
+{"timestamp":"2026-10-02T00:41:51.980Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-41488","message":"Token verified for user usr_350"}
+{"timestamp":"2026-10-02T00:41:53.824Z","level":"INFO","service":"api-gateway","trace_id":"tr-81238","message":"Token verified for user usr_676"}
+{"timestamp":"2026-10-02T00:41:55.866Z","level":"INFO","service":"cart-service","trace_id":"tr-14523","message":"Payment intent created for amount $224.00"}
+{"timestamp":"2026-10-02T00:41:57.940Z","level":"INFO","service":"inventory-service","trace_id":"tr-85711","message":"Cart items calculated total: $180.00"}
+{"timestamp":"2026-10-02T00:42:00.598Z","level":"INFO","service":"api-gateway","trace_id":"tr-96095","message":"Inventory reserved item_9548 quantity=2"}
+{"timestamp":"2026-10-02T00:42:02.562Z","level":"INFO","service":"auth-service","trace_id":"tr-72303","message":"Inventory reserved item_1361 quantity=5"}
+{"timestamp":"2026-10-02T00:42:03.736Z","level":"INFO","service":"payment-service","trace_id":"tr-21945","message":"Inventory reserved item_1476 quantity=5"}
+{"timestamp":"2026-10-02T00:42:06.086Z","level":"INFO","service":"payment-service","trace_id":"tr-86855","message":"Cart items calculated total: $70.00"}
+{"timestamp":"2026-10-02T00:42:07.998Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-71597","message":"HTTP GET /api/v1/catalog returned 200 OK duration=29ms"}
+{"timestamp":"2026-10-02T00:42:09.935Z","level":"INFO","service":"inventory-service","trace_id":"tr-99386","message":"Token verified for user usr_588"}
+{"timestamp":"2026-10-02T00:42:12.568Z","level":"INFO","service":"inventory-service","trace_id":"tr-29054","message":"HTTP GET /api/v1/catalog returned 200 OK duration=27ms"}
+{"timestamp":"2026-10-02T00:42:13.991Z","level":"INFO","service":"payment-service","trace_id":"tr-10134","message":"Cart items calculated total: $68.00"}
+{"timestamp":"2026-10-02T00:42:16.366Z","level":"INFO","service":"cart-service","trace_id":"tr-21077","message":"Inventory reserved item_3234 quantity=5"}
+{"timestamp":"2026-10-02T00:42:18.301Z","level":"DEBUG","service":"auth-service","trace_id":"tr-31263","message":"HTTP GET /api/v1/catalog returned 200 OK duration=32ms"}
+{"timestamp":"2026-10-02T00:42:20.408Z","level":"INFO","service":"order-service","trace_id":"tr-45205","message":"HTTP GET /api/v1/catalog returned 200 OK duration=44ms"}
+{"timestamp":"2026-10-02T00:42:21.890Z","level":"INFO","service":"api-gateway","trace_id":"tr-95887","message":"Cart items calculated total: $335.00"}
+{"timestamp":"2026-10-02T00:42:23.820Z","level":"INFO","service":"api-gateway","trace_id":"tr-41836","message":"Token verified for user usr_123"}
+{"timestamp":"2026-10-02T00:42:26.161Z","level":"INFO","service":"payment-service","trace_id":"tr-69453","message":"Cart items calculated total: $15.00"}
+{"timestamp":"2026-10-02T00:42:28.102Z","level":"INFO","service":"order-service","trace_id":"tr-55060","message":"Cart items calculated total: $368.00"}
+{"timestamp":"2026-10-02T00:42:29.690Z","level":"INFO","service":"auth-service","trace_id":"tr-22755","message":"Token verified for user usr_948"}
+{"timestamp":"2026-10-02T00:42:31.664Z","level":"DEBUG","service":"api-gateway","trace_id":"tr-11764","message":"HTTP GET /api/v1/catalog returned 200 OK duration=55ms"}
+{"timestamp":"2026-10-02T00:42:34.389Z","level":"INFO","service":"auth-service","trace_id":"tr-74340","message":"HTTP GET /api/v1/catalog returned 200 OK duration=66ms"}
+{"timestamp":"2026-10-02T00:42:36.171Z","level":"INFO","service":"order-service","trace_id":"tr-66059","message":"Cart items calculated total: $484.00"}
+{"timestamp":"2026-10-02T00:42:37.762Z","level":"INFO","service":"cart-service","trace_id":"tr-84014","message":"Cart items calculated total: $459.00"}
+{"timestamp":"2026-10-02T00:42:39.956Z","level":"INFO","service":"auth-service","trace_id":"tr-37314","message":"Token verified for user usr_518"}
+{"timestamp":"2026-10-02T00:42:42.110Z","level":"INFO","service":"auth-service","trace_id":"tr-47807","message":"Cart items calculated total: $188.00"}
+{"timestamp":"2026-10-02T00:42:44.090Z","level":"INFO","service":"auth-service","trace_id":"tr-95629","message":"Payment intent created for amount $347.00"}
+{"timestamp":"2026-10-02T00:42:46.255Z","level":"INFO","service":"api-gateway","trace_id":"tr-91790","message":"Payment intent created for amount $10.00"}
+{"timestamp":"2026-10-02T00:42:47.657Z","level":"DEBUG","service":"inventory-service","trace_id":"tr-15415","message":"Token verified for user usr_380"}
+{"timestamp":"2026-10-02T00:42:50.541Z","level":"DEBUG","service":"order-service","trace_id":"tr-32484","message":"Cart items calculated total: $28.00"}
+{"timestamp":"2026-10-02T00:42:52.594Z","level":"INFO","service":"order-service","trace_id":"tr-42053","message":"Inventory reserved item_5807 quantity=5"}
+{"timestamp":"2026-10-02T00:42:54.100Z","level":"INFO","service":"api-gateway","trace_id":"tr-27818","message":"Inventory reserved item_7552 quantity=1"}
+{"timestamp":"2026-10-02T00:42:55.747Z","level":"INFO","service":"api-gateway","trace_id":"tr-60893","message":"Inventory reserved item_8894 quantity=3"}
+{"timestamp":"2026-10-02T00:42:57.734Z","level":"INFO","service":"auth-service","trace_id":"tr-15311","message":"Cart items calculated total: $464.00"}
+{"timestamp":"2026-10-02T00:42:59.688Z","level":"INFO","service":"payment-service","trace_id":"tr-29359","message":"Token verified for user usr_523"}

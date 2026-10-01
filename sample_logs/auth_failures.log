@@ -1,0 +1,300 @@
+Oct 02 00:31:21 srv-edge-01 cron[7072]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:23 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:25 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:28 srv-edge-01 cron[5561]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:30 srv-edge-01 sshd[2496]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:31:32 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:34 srv-edge-01 cron[4573]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:35 srv-edge-01 cron[4972]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:38 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:40 srv-edge-01 sshd[1011]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:31:42 srv-edge-01 cron[3644]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:43 srv-edge-01 cron[2336]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:46 srv-edge-01 cron[3308]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:48 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:49 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:52 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:31:53 srv-edge-01 cron[2529]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:31:56 srv-edge-01 sshd[1743]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:31:58 srv-edge-01 sshd[8700]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:31:59 srv-edge-01 sshd[1767]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:02 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:04 srv-edge-01 sshd[4273]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:05 srv-edge-01 cron[2615]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:32:08 srv-edge-01 cron[7884]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:32:10 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:12 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:13 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:16 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:18 srv-edge-01 sshd[6884]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:20 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:21 srv-edge-01 sshd[9244]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:24 srv-edge-01 sshd[1424]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:25 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:27 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:30 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:32 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:34 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:36 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:32:38 srv-edge-01 sshd[6781]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:40 srv-edge-01 sshd[1238]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:32:42 srv-edge-01 sshd[8717]: Failed password for oracle from 203.0.113.42 port 40550 ssh2
+Oct 02 00:32:44 srv-edge-01 sshd[9526]: Failed password for ubuntu from 203.0.113.42 port 56992 ssh2
+Oct 02 00:32:45 srv-edge-01 sshd[6385]: Failed password for admin from 203.0.113.42 port 61530 ssh2
+Oct 02 00:32:48 srv-edge-01 sshd[9206]: Failed password for ubuntu from 203.0.113.42 port 45431 ssh2
+Oct 02 00:32:50 srv-edge-01 sshd[2645]: Failed password for ubuntu from 203.0.113.42 port 45715 ssh2
+Oct 02 00:32:51 srv-edge-01 sshd[9797]: Failed password for oracle from 203.0.113.42 port 58997 ssh2
+Oct 02 00:32:54 srv-edge-01 sshd[1557]: Failed password for admin from 203.0.113.42 port 56004 ssh2
+Oct 02 00:32:56 srv-edge-01 sshd[3686]: Failed password for ubuntu from 203.0.113.42 port 44930 ssh2
+Oct 02 00:32:58 srv-edge-01 sshd[7099]: Failed password for admin from 203.0.113.42 port 49907 ssh2
+Oct 02 00:33:00 srv-edge-01 sshd[8881]: Failed password for git from 203.0.113.42 port 64504 ssh2
+Oct 02 00:33:02 srv-edge-01 sshd[5604]: Failed password for ubuntu from 203.0.113.42 port 59847 ssh2
+Oct 02 00:33:04 srv-edge-01 sshd[3833]: Failed password for postgres from 203.0.113.42 port 53784 ssh2
+Oct 02 00:33:06 srv-edge-01 sshd[6302]: Failed password for root from 203.0.113.42 port 56942 ssh2
+Oct 02 00:33:07 srv-edge-01 sshd[4836]: Failed password for ubuntu from 203.0.113.42 port 47428 ssh2
+Oct 02 00:33:10 srv-edge-01 sshd[1710]: Failed password for git from 203.0.113.42 port 58128 ssh2
+Oct 02 00:33:11 srv-edge-01 sshd[4516]: Failed password for test from 203.0.113.42 port 50047 ssh2
+Oct 02 00:33:14 srv-edge-01 sshd[8095]: Failed password for git from 203.0.113.42 port 52289 ssh2
+Oct 02 00:33:16 srv-edge-01 sshd[8052]: Failed password for oracle from 203.0.113.42 port 61297 ssh2
+Oct 02 00:33:18 srv-edge-01 sshd[7005]: Failed password for oracle from 203.0.113.42 port 60553 ssh2
+Oct 02 00:33:20 srv-edge-01 sshd[6189]: Failed password for admin from 203.0.113.42 port 64966 ssh2
+Oct 02 00:33:22 srv-edge-01 sshd[7508]: Failed password for root from 203.0.113.42 port 49780 ssh2
+Oct 02 00:33:24 srv-edge-01 sshd[5379]: Failed password for postgres from 203.0.113.42 port 42492 ssh2
+Oct 02 00:33:26 srv-edge-01 sshd[9487]: Failed password for oracle from 203.0.113.42 port 58132 ssh2
+Oct 02 00:33:28 srv-edge-01 sshd[7328]: Failed password for root from 203.0.113.42 port 45319 ssh2
+Oct 02 00:33:30 srv-edge-01 sshd[5295]: Failed password for git from 203.0.113.42 port 62491 ssh2
+Oct 02 00:33:31 srv-edge-01 sshd[9999]: Failed password for test from 203.0.113.42 port 50411 ssh2
+Oct 02 00:33:34 srv-edge-01 sshd[9060]: Failed password for admin from 203.0.113.42 port 55355 ssh2
+Oct 02 00:33:36 srv-edge-01 sshd[9106]: Failed password for git from 203.0.113.42 port 51103 ssh2
+Oct 02 00:33:37 srv-edge-01 sshd[7573]: Failed password for admin from 203.0.113.42 port 48240 ssh2
+Oct 02 00:33:40 srv-edge-01 sshd[8567]: Failed password for root from 203.0.113.42 port 48112 ssh2
+Oct 02 00:33:42 srv-edge-01 sshd[5492]: Failed password for postgres from 203.0.113.42 port 42219 ssh2
+Oct 02 00:33:44 srv-edge-01 sshd[4613]: Failed password for postgres from 203.0.113.42 port 52771 ssh2
+Oct 02 00:33:46 srv-edge-01 sshd[2376]: Failed password for oracle from 203.0.113.42 port 43452 ssh2
+Oct 02 00:33:48 srv-edge-01 sshd[2168]: Failed password for root from 203.0.113.42 port 43157 ssh2
+Oct 02 00:33:50 srv-edge-01 sshd[6430]: Failed password for oracle from 203.0.113.42 port 63483 ssh2
+Oct 02 00:33:52 srv-edge-01 sshd[2108]: Failed password for admin from 203.0.113.42 port 42268 ssh2
+Oct 02 00:33:54 srv-edge-01 sshd[2755]: Failed password for oracle from 203.0.113.42 port 57572 ssh2
+Oct 02 00:33:56 srv-edge-01 sshd[1958]: Failed password for ubuntu from 203.0.113.42 port 50567 ssh2
+Oct 02 00:33:58 srv-edge-01 sshd[6948]: Failed password for admin from 203.0.113.42 port 40691 ssh2
+Oct 02 00:34:00 srv-edge-01 sshd[9002]: Failed password for test from 203.0.113.42 port 62776 ssh2
+Oct 02 00:34:01 srv-edge-01 sshd[1838]: Failed password for ubuntu from 203.0.113.42 port 43854 ssh2
+Oct 02 00:34:04 srv-edge-01 sshd[6021]: Failed password for test from 203.0.113.42 port 62406 ssh2
+Oct 02 00:34:06 srv-edge-01 sshd[7087]: Failed password for root from 203.0.113.42 port 45886 ssh2
+Oct 02 00:34:08 srv-edge-01 sshd[8349]: Failed password for test from 203.0.113.42 port 45652 ssh2
+Oct 02 00:34:10 srv-edge-01 sshd[2999]: Failed password for oracle from 203.0.113.42 port 48497 ssh2
+Oct 02 00:34:11 srv-edge-01 sshd[2642]: Failed password for postgres from 203.0.113.42 port 57033 ssh2
+Oct 02 00:34:14 srv-edge-01 sshd[5728]: Failed password for test from 203.0.113.42 port 50361 ssh2
+Oct 02 00:34:15 srv-edge-01 sshd[9996]: Failed password for git from 203.0.113.42 port 41309 ssh2
+Oct 02 00:34:17 srv-edge-01 sshd[6034]: Failed password for test from 203.0.113.42 port 50987 ssh2
+Oct 02 00:34:20 srv-edge-01 sshd[7764]: Failed password for root from 203.0.113.42 port 43411 ssh2
+Oct 02 00:34:22 srv-edge-01 sshd[9507]: Failed password for git from 203.0.113.42 port 49979 ssh2
+Oct 02 00:34:24 srv-edge-01 sshd[5846]: Failed password for oracle from 203.0.113.42 port 40980 ssh2
+Oct 02 00:34:26 srv-edge-01 sshd[3165]: Failed password for oracle from 203.0.113.42 port 46612 ssh2
+Oct 02 00:34:27 srv-edge-01 sshd[9640]: Failed password for postgres from 203.0.113.42 port 40102 ssh2
+Oct 02 00:34:30 srv-edge-01 sshd[6694]: Failed password for oracle from 203.0.113.42 port 62361 ssh2
+Oct 02 00:34:32 srv-edge-01 sshd[1216]: Failed password for ubuntu from 203.0.113.42 port 41303 ssh2
+Oct 02 00:34:34 srv-edge-01 sshd[2730]: Failed password for git from 203.0.113.42 port 56687 ssh2
+Oct 02 00:34:36 srv-edge-01 sshd[6997]: Failed password for test from 203.0.113.42 port 54474 ssh2
+Oct 02 00:34:38 srv-edge-01 sshd[4755]: Failed password for test from 203.0.113.42 port 59804 ssh2
+Oct 02 00:34:40 srv-edge-01 sshd[4553]: Failed password for postgres from 203.0.113.42 port 53232 ssh2
+Oct 02 00:34:42 srv-edge-01 sshd[3691]: Failed password for oracle from 203.0.113.42 port 45749 ssh2
+Oct 02 00:34:43 srv-edge-01 sshd[1677]: Failed password for ubuntu from 203.0.113.42 port 54408 ssh2
+Oct 02 00:34:46 srv-edge-01 sshd[8431]: Failed password for git from 203.0.113.42 port 47801 ssh2
+Oct 02 00:34:47 srv-edge-01 sshd[7741]: Failed password for root from 203.0.113.42 port 56957 ssh2
+Oct 02 00:34:49 srv-edge-01 sshd[4802]: Failed password for postgres from 203.0.113.42 port 50094 ssh2
+Oct 02 00:34:51 srv-edge-01 sshd[8271]: Failed password for oracle from 203.0.113.42 port 61851 ssh2
+Oct 02 00:34:54 srv-edge-01 sshd[4984]: Failed password for postgres from 203.0.113.42 port 45694 ssh2
+Oct 02 00:34:56 srv-edge-01 sshd[2017]: Failed password for postgres from 203.0.113.42 port 40001 ssh2
+Oct 02 00:34:57 srv-edge-01 sshd[1498]: Failed password for root from 203.0.113.42 port 42239 ssh2
+Oct 02 00:35:00 srv-edge-01 sshd[7375]: Failed password for test from 203.0.113.42 port 63583 ssh2
+Oct 02 00:35:02 srv-edge-01 sshd[7099]: Failed password for test from 203.0.113.42 port 45815 ssh2
+Oct 02 00:35:04 srv-edge-01 sshd[5805]: Failed password for ubuntu from 203.0.113.42 port 52865 ssh2
+Oct 02 00:35:06 srv-edge-01 sshd[2232]: Failed password for postgres from 203.0.113.42 port 41057 ssh2
+Oct 02 00:35:08 srv-edge-01 sshd[7688]: Failed password for root from 203.0.113.42 port 55346 ssh2
+Oct 02 00:35:10 srv-edge-01 sshd[1708]: Failed password for git from 203.0.113.42 port 58372 ssh2
+Oct 02 00:35:11 srv-edge-01 sshd[3669]: Failed password for root from 203.0.113.42 port 49719 ssh2
+Oct 02 00:35:14 srv-edge-01 sshd[1514]: Failed password for postgres from 203.0.113.42 port 45919 ssh2
+Oct 02 00:35:16 srv-edge-01 sshd[3648]: Failed password for oracle from 203.0.113.42 port 55264 ssh2
+Oct 02 00:35:17 srv-edge-01 sshd[3596]: Failed password for ubuntu from 203.0.113.42 port 63187 ssh2
+Oct 02 00:35:19 srv-edge-01 sshd[8502]: Failed password for git from 203.0.113.42 port 59566 ssh2
+Oct 02 00:35:21 srv-edge-01 sshd[8247]: Failed password for oracle from 203.0.113.42 port 63459 ssh2
+Oct 02 00:35:23 srv-edge-01 sshd[6531]: Failed password for postgres from 203.0.113.42 port 64899 ssh2
+Oct 02 00:35:25 srv-edge-01 sshd[5563]: Failed password for test from 203.0.113.42 port 44496 ssh2
+Oct 02 00:35:28 srv-edge-01 sshd[6936]: Failed password for git from 203.0.113.42 port 51799 ssh2
+Oct 02 00:35:29 srv-edge-01 sshd[7068]: Failed password for test from 203.0.113.42 port 64952 ssh2
+Oct 02 00:35:32 srv-edge-01 sshd[5155]: Failed password for admin from 203.0.113.42 port 53071 ssh2
+Oct 02 00:35:33 srv-edge-01 sshd[2182]: Failed password for admin from 203.0.113.42 port 62423 ssh2
+Oct 02 00:35:35 srv-edge-01 sshd[7407]: Failed password for oracle from 203.0.113.42 port 45425 ssh2
+Oct 02 00:35:38 srv-edge-01 sshd[8830]: Failed password for root from 203.0.113.42 port 60707 ssh2
+Oct 02 00:35:39 srv-edge-01 sshd[7980]: Failed password for postgres from 203.0.113.42 port 55833 ssh2
+Oct 02 00:35:41 srv-edge-01 sshd[7507]: Failed password for postgres from 203.0.113.42 port 54822 ssh2
+Oct 02 00:35:44 srv-edge-01 sshd[7683]: Failed password for root from 203.0.113.42 port 57116 ssh2
+Oct 02 00:35:45 srv-edge-01 sshd[7490]: Failed password for ubuntu from 203.0.113.42 port 48595 ssh2
+Oct 02 00:35:48 srv-edge-01 sshd[6261]: Failed password for oracle from 203.0.113.42 port 40238 ssh2
+Oct 02 00:35:50 srv-edge-01 sshd[8058]: Failed password for postgres from 203.0.113.42 port 54719 ssh2
+Oct 02 00:35:52 srv-edge-01 sshd[9090]: Failed password for root from 203.0.113.42 port 50715 ssh2
+Oct 02 00:35:54 srv-edge-01 sshd[5555]: Failed password for ubuntu from 203.0.113.42 port 43417 ssh2
+Oct 02 00:35:55 srv-edge-01 sshd[1238]: Failed password for test from 203.0.113.42 port 57038 ssh2
+Oct 02 00:35:58 srv-edge-01 sshd[3618]: Failed password for ubuntu from 203.0.113.42 port 52560 ssh2
+Oct 02 00:36:00 srv-edge-01 sshd[6584]: Failed password for ubuntu from 203.0.113.42 port 43862 ssh2
+Oct 02 00:36:01 srv-edge-01 sshd[1247]: Failed password for test from 203.0.113.42 port 44856 ssh2
+Oct 02 00:36:04 srv-edge-01 sshd[1655]: Failed password for git from 203.0.113.42 port 43101 ssh2
+Oct 02 00:36:05 srv-edge-01 sshd[7510]: Failed password for root from 203.0.113.42 port 47252 ssh2
+Oct 02 00:36:08 srv-edge-01 sshd[6933]: Failed password for admin from 203.0.113.42 port 44058 ssh2
+Oct 02 00:36:10 srv-edge-01 sshd[9803]: Failed password for admin from 203.0.113.42 port 45097 ssh2
+Oct 02 00:36:11 srv-edge-01 sshd[7701]: Failed password for postgres from 203.0.113.42 port 53214 ssh2
+Oct 02 00:36:14 srv-edge-01 sshd[7353]: Failed password for git from 203.0.113.42 port 59447 ssh2
+Oct 02 00:36:16 srv-edge-01 sshd[2311]: Failed password for test from 203.0.113.42 port 59237 ssh2
+Oct 02 00:36:18 srv-edge-01 sshd[2930]: Failed password for admin from 203.0.113.42 port 60601 ssh2
+Oct 02 00:36:19 srv-edge-01 sshd[9151]: Failed password for test from 203.0.113.42 port 44553 ssh2
+Oct 02 00:36:21 srv-edge-01 sshd[8348]: Failed password for ubuntu from 203.0.113.42 port 50395 ssh2
+Oct 02 00:36:24 srv-edge-01 sshd[8865]: Failed password for admin from 203.0.113.42 port 53154 ssh2
+Oct 02 00:36:25 srv-edge-01 sshd[8987]: Failed password for root from 203.0.113.42 port 50900 ssh2
+Oct 02 00:36:28 srv-edge-01 sshd[1604]: Failed password for admin from 203.0.113.42 port 47972 ssh2
+Oct 02 00:36:29 srv-edge-01 sshd[2268]: Failed password for oracle from 203.0.113.42 port 64778 ssh2
+Oct 02 00:36:32 srv-edge-01 sshd[8199]: Failed password for test from 203.0.113.42 port 41961 ssh2
+Oct 02 00:36:34 srv-edge-01 sshd[8983]: Failed password for ubuntu from 203.0.113.42 port 54411 ssh2
+Oct 02 00:36:36 srv-edge-01 sshd[1420]: Failed password for ubuntu from 203.0.113.42 port 50197 ssh2
+Oct 02 00:36:38 srv-edge-01 sshd[3183]: Failed password for root from 203.0.113.42 port 46619 ssh2
+Oct 02 00:36:40 srv-edge-01 sshd[4098]: Failed password for oracle from 203.0.113.42 port 43488 ssh2
+Oct 02 00:36:41 srv-edge-01 sshd[8044]: Failed password for ubuntu from 203.0.113.42 port 48146 ssh2
+Oct 02 00:36:44 srv-edge-01 sshd[4340]: Failed password for root from 203.0.113.42 port 60221 ssh2
+Oct 02 00:36:45 srv-edge-01 sshd[4704]: Failed password for test from 203.0.113.42 port 61096 ssh2
+Oct 02 00:36:47 srv-edge-01 sshd[5546]: Failed password for test from 203.0.113.42 port 64873 ssh2
+Oct 02 00:36:50 srv-edge-01 sshd[1718]: Failed password for root from 203.0.113.42 port 41277 ssh2
+Oct 02 00:36:51 srv-edge-01 sshd[9522]: Failed password for root from 203.0.113.42 port 51290 ssh2
+Oct 02 00:36:53 srv-edge-01 sshd[3432]: Failed password for oracle from 203.0.113.42 port 54468 ssh2
+Oct 02 00:36:55 srv-edge-01 sshd[1013]: Failed password for postgres from 203.0.113.42 port 44627 ssh2
+Oct 02 00:36:58 srv-edge-01 sshd[8517]: Failed password for oracle from 203.0.113.42 port 56655 ssh2
+Oct 02 00:37:00 srv-edge-01 sshd[5821]: Failed password for test from 203.0.113.42 port 45133 ssh2
+Oct 02 00:37:01 srv-edge-01 sshd[5518]: Failed password for test from 203.0.113.42 port 58360 ssh2
+Oct 02 00:37:04 srv-edge-01 sshd[6231]: Failed password for admin from 203.0.113.42 port 53560 ssh2
+Oct 02 00:37:05 srv-edge-01 sshd[9634]: Failed password for ubuntu from 203.0.113.42 port 49165 ssh2
+Oct 02 00:37:08 srv-edge-01 sshd[1419]: Failed password for root from 203.0.113.42 port 46075 ssh2
+Oct 02 00:37:10 srv-edge-01 sshd[3202]: Failed password for postgres from 203.0.113.42 port 45731 ssh2
+Oct 02 00:37:11 srv-edge-01 sshd[7057]: Failed password for ubuntu from 203.0.113.42 port 56602 ssh2
+Oct 02 00:37:14 srv-edge-01 sshd[7351]: Failed password for ubuntu from 203.0.113.42 port 55136 ssh2
+Oct 02 00:37:15 srv-edge-01 sshd[7174]: Failed password for test from 203.0.113.42 port 58194 ssh2
+Oct 02 00:37:18 srv-edge-01 sshd[1691]: Failed password for postgres from 203.0.113.42 port 48333 ssh2
+Oct 02 00:37:19 srv-edge-01 sshd[3215]: Failed password for oracle from 203.0.113.42 port 57226 ssh2
+Oct 02 00:37:22 srv-edge-01 sshd[9588]: Failed password for git from 203.0.113.42 port 64582 ssh2
+Oct 02 00:37:24 srv-edge-01 sshd[7289]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:26 srv-edge-01 sshd[3590]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:28 srv-edge-01 sshd[5220]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:29 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:32 srv-edge-01 sshd[2196]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:34 srv-edge-01 cron[5513]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:37:36 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:38 srv-edge-01 cron[7127]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:37:40 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:41 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:44 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:45 srv-edge-01 sshd[7537]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:48 srv-edge-01 sshd[9719]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:50 srv-edge-01 sshd[5046]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:52 srv-edge-01 sshd[2028]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:54 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:37:56 srv-edge-01 sshd[8863]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:37:58 srv-edge-01 cron[3579]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:00 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:02 srv-edge-01 cron[5890]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:04 srv-edge-01 sshd[4244]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:06 srv-edge-01 sshd[2621]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:08 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:09 srv-edge-01 cron[1637]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:11 srv-edge-01 sshd[9820]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:14 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:16 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:17 srv-edge-01 cron[9928]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:20 srv-edge-01 sshd[8512]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:22 srv-edge-01 cron[7124]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:23 srv-edge-01 cron[4834]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:26 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:27 srv-edge-01 sshd[8129]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:30 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:32 srv-edge-01 cron[4688]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:33 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:36 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:38 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:39 srv-edge-01 sshd[3273]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:42 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:44 srv-edge-01 cron[8326]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:46 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:48 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:49 srv-edge-01 sshd[4354]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:38:51 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:53 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:38:55 srv-edge-01 cron[7994]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:58 srv-edge-01 cron[9040]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:38:59 srv-edge-01 sshd[9337]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:02 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:04 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:05 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:08 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:09 srv-edge-01 cron[8802]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:11 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:14 srv-edge-01 cron[3559]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:15 srv-edge-01 cron[4566]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:17 srv-edge-01 cron[5695]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:20 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:22 srv-edge-01 sshd[8399]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:24 srv-edge-01 sshd[7672]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:26 srv-edge-01 cron[9333]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:28 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:30 srv-edge-01 cron[1036]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:31 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:33 srv-edge-01 cron[3963]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:36 srv-edge-01 sshd[2653]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:38 srv-edge-01 cron[6761]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:40 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:42 srv-edge-01 sshd[2589]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:43 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:46 srv-edge-01 sshd[6965]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:48 srv-edge-01 cron[7437]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:39:49 srv-edge-01 sshd[1311]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:39:52 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:53 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:55 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:39:58 srv-edge-01 sshd[5888]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:00 srv-edge-01 cron[8404]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:02 srv-edge-01 sshd[6733]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:03 srv-edge-01 cron[8967]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:05 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:08 srv-edge-01 cron[8029]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:10 srv-edge-01 sshd[1155]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:12 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:14 srv-edge-01 sshd[4092]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:16 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:18 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:20 srv-edge-01 cron[9134]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:22 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:24 srv-edge-01 cron[3930]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:25 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:27 srv-edge-01 cron[4381]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:30 srv-edge-01 cron[7620]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:31 srv-edge-01 cron[3898]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:33 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:36 srv-edge-01 cron[5893]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:38 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:39 srv-edge-01 sshd[2490]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:41 srv-edge-01 cron[6323]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:43 srv-edge-01 cron[7587]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:45 srv-edge-01 sshd[2388]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:40:48 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:49 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:40:52 srv-edge-01 cron[8951]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:53 srv-edge-01 cron[7941]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:55 srv-edge-01 cron[7416]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:40:57 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:41:00 srv-edge-01 sshd[6193]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:41:02 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:41:04 srv-edge-01 cron[5058]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:41:06 srv-edge-01 cron[9930]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:41:08 srv-edge-01 sshd[8020]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:41:09 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:41:11 srv-edge-01 cron[7987]: (root) CMD (/usr/local/bin/backup-sync.sh > /dev/null)
+Oct 02 00:41:14 srv-edge-01 sshd[4430]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:41:16 srv-edge-01 systemd[1]: Starting Daily apt download activities...
+Oct 02 00:41:18 srv-edge-01 sshd[9850]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
+Oct 02 00:41:19 srv-edge-01 sshd[9284]: Accepted publickey for devops from 192.168.1.10 port 52140 ssh2
