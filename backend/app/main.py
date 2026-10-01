@@ -4,7 +4,8 @@ import csv
 import json
 from datetime import datetime
 from typing import Optional, List
-from fastapi import FastAPI, UploadFile, File, Form, Query, HTTPException, WebSocket, WebSocketDisconnect
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, APIRouter, UploadFile, File, Form, Query, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, Response, HTMLResponse
 from pydantic import BaseModel
@@ -20,8 +21,6 @@ from .generator.log_generator import (
 )
 from .analytics.ai_diagnostics import analyze_with_heuristics, analyze_with_gemini
 
-from contextlib import asynccontextmanager
-
 def initialize_default_dataset():
     if not GLOBAL_STORE.datasets:
         dataset_name = "microservices_outage"
@@ -29,6 +28,9 @@ def initialize_default_dataset():
         entries, detected_parser = parse_raw_log_content(raw_logs, source_name="microservices_outage.json")
         dataset = GLOBAL_STORE.create_dataset(dataset_name, parser_type=detected_parser)
         dataset.add_entries(entries)
+
+# Ensure initialized at module import for Serverless runtimes
+initialize_default_dataset()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -52,8 +54,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+router = APIRouter()
 
-@app.get("/api/health")
+@router.get("/health")
 def health_check():
     return {
         "status": "healthy",
@@ -63,7 +66,7 @@ def health_check():
     }
 
 
-@app.get("/api/datasets")
+@router.get("/datasets")
 def get_datasets():
     return {
         "datasets": GLOBAL_STORE.list_datasets(),
@@ -74,7 +77,7 @@ def get_datasets():
 class SelectDatasetPayload(BaseModel):
     name: str
 
-@app.post("/api/datasets/select")
+@router.post("/datasets/select")
 def select_dataset(payload: SelectDatasetPayload):
     if payload.name not in GLOBAL_STORE.datasets:
         raise HTTPException(status_code=404, detail="Dataset not found")
@@ -82,7 +85,7 @@ def select_dataset(payload: SelectDatasetPayload):
     return {"status": "success", "active_dataset": payload.name}
 
 
-@app.post("/api/upload")
+@router.post("/upload")
 async def upload_log_file(file: UploadFile = File(...)):
     content_bytes = await file.read()
     try:
@@ -111,7 +114,7 @@ async def upload_log_file(file: UploadFile = File(...)):
 class LoadSamplePayload(BaseModel):
     sample_type: str  # 'microservices_outage', 'nginx_access', 'auth_failures', 'springboot_stacktrace'
 
-@app.post("/api/load-sample")
+@router.post("/load-sample")
 def load_sample_dataset(payload: LoadSamplePayload):
     st = payload.sample_type
     name = f"sample_{st}"
@@ -139,7 +142,7 @@ def load_sample_dataset(payload: LoadSamplePayload):
     }
 
 
-@app.get("/api/logs")
+@router.get("/logs")
 def get_logs(
     dataset: Optional[str] = None,
     q: Optional[str] = None,
@@ -171,7 +174,7 @@ def get_logs(
     )
 
 
-@app.get("/api/clusters")
+@router.get("/clusters")
 def get_clusters(dataset: Optional[str] = None):
     ds = GLOBAL_STORE.get_dataset(dataset)
     if not ds:
@@ -179,7 +182,7 @@ def get_clusters(dataset: Optional[str] = None):
     return {"clusters": ds.clusters}
 
 
-@app.get("/api/anomalies")
+@router.get("/anomalies")
 def get_anomalies(dataset: Optional[str] = None):
     ds = GLOBAL_STORE.get_dataset(dataset)
     if not ds:
@@ -187,7 +190,7 @@ def get_anomalies(dataset: Optional[str] = None):
     return {"anomalies": ds.anomalies}
 
 
-@app.get("/api/metrics")
+@router.get("/metrics")
 def get_metrics(dataset: Optional[str] = None):
     ds = GLOBAL_STORE.get_dataset(dataset)
     if not ds:
@@ -199,7 +202,7 @@ class DiagnosticsPayload(BaseModel):
     dataset: Optional[str] = None
     gemini_api_key: Optional[str] = None
 
-@app.post("/api/diagnostics")
+@router.post("/diagnostics")
 async def run_diagnostics(payload: DiagnosticsPayload):
     ds = GLOBAL_STORE.get_dataset(payload.dataset)
     if not ds:
@@ -230,7 +233,7 @@ class SimulatorControlPayload(BaseModel):
     action: str  # 'start' or 'stop'
     delay_seconds: float = 1.0
 
-@app.post("/api/simulator/control")
+@router.post("/simulator/control")
 async def control_simulator(payload: SimulatorControlPayload):
     if payload.action == "start":
         SIMULATOR.delay_seconds = payload.delay_seconds
@@ -242,7 +245,7 @@ async def control_simulator(payload: SimulatorControlPayload):
     raise HTTPException(status_code=400, detail="Invalid action, use 'start' or 'stop'")
 
 
-@app.get("/api/export")
+@router.get("/export")
 def export_logs(
     format: str = "json", # 'json' or 'csv'
     dataset: Optional[str] = None,
@@ -283,7 +286,7 @@ def export_logs(
         )
 
 
-@app.get("/api/export/report", response_class=HTMLResponse)
+@router.get("/export/report", response_class=HTMLResponse)
 def generate_incident_report(dataset: Optional[str] = None):
     ds = GLOBAL_STORE.get_dataset(dataset)
     if not ds:
@@ -395,6 +398,9 @@ def generate_incident_report(dataset: Optional[str] = None):
 </html>"""
     return HTMLResponse(content=html)
 
+# Register routes under both /api and root /
+app.include_router(router, prefix="/api")
+app.include_router(router)
 
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
@@ -402,7 +408,6 @@ async def websocket_endpoint(websocket: WebSocket):
     try:
         while True:
             data = await websocket.receive_text()
-            # Can receive ping or filter updates
             try:
                 msg = json.loads(data)
                 if msg.get("type") == "ping":
@@ -416,8 +421,7 @@ async def websocket_endpoint(websocket: WebSocket):
 
 from fastapi.staticfiles import StaticFiles
 
-# Mount built frontend if available
+# Mount built frontend if available locally
 frontend_dist = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
 if os.path.exists(frontend_dist):
     app.mount("/", StaticFiles(directory=frontend_dist, html=True), name="frontend")
-
