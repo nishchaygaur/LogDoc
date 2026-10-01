@@ -123,28 +123,44 @@ export function createLogWebSocket(onMessage: (data: any) => void): () => void {
   const wsUrl = `${protocol}//${window.location.host}/ws`;
   let ws: WebSocket | null = null;
   let isClosed = false;
+  let retryCount = 0;
 
   function connect() {
-    ws = new WebSocket(wsUrl);
-    ws.onmessage = (event) => {
-      try {
-        const data = JSON.parse(event.data);
-        onMessage(data);
-      } catch (err) {
-        console.error('WS parse error:', err);
-      }
-    };
-    ws.onclose = () => {
-      if (!isClosed) {
-        setTimeout(connect, 2000);
-      }
-    };
+    if (isClosed || retryCount >= 3) return;
+    try {
+      ws = new WebSocket(wsUrl);
+      ws.onmessage = (event) => {
+        try {
+          const data = JSON.parse(event.data);
+          onMessage(data);
+        } catch {
+          // ignore malformed message
+        }
+      };
+      ws.onerror = () => {
+        retryCount++;
+      };
+      ws.onclose = () => {
+        if (!isClosed && retryCount < 3) {
+          retryCount++;
+          setTimeout(connect, 4000);
+        }
+      };
+    } catch {
+      retryCount++;
+    }
   }
 
   connect();
 
   return () => {
     isClosed = true;
-    if (ws) ws.close();
+    if (ws) {
+      try {
+        ws.close();
+      } catch {
+        // ignore
+      }
+    }
   };
 }
