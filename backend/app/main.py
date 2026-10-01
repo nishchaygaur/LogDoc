@@ -57,7 +57,6 @@ app.add_middleware(
 router = APIRouter()
 
 @router.get("/")
-@router.get("")
 def api_root():
     return {
         "status": "healthy",
