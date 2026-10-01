@@ -2,6 +2,9 @@
 
 **LogDoc** is a high-performance, full-stack log analysis and automated incident diagnostic platform. It seamlessly ingests, auto-detects, parses, and clusters logs from diverse enterprise sources, detects anomalies and volume spikes in real-time, and generates automated root-cause analyses (RCA) using both rule-based heuristic intelligence and Google Gemini LLMs.
 
+**Live Deployment**: [`https://logdoc.cyberforage.space`](https://logdoc.cyberforage.space)  
+**GitHub Repository**: [`https://github.com/nishchaygaur/LogDoc`](https://github.com/nishchaygaur/LogDoc)
+
 ---
 
 ## 🚀 Key Capabilities
