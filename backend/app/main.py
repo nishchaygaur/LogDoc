@@ -412,6 +412,10 @@ def generate_incident_report(dataset: Optional[str] = None):
 app.include_router(router, prefix="/api")
 app.include_router(router)
 
+@app.get("/api")
+def api_base_endpoint():
+    return api_root()
+
 @app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await WS_MANAGER.connect(websocket)
