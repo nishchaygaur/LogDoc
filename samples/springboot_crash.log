@@ -1,0 +1,192 @@
+2026-10-02 13:04:24.398  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:04:26.965  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:04:29.118  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:04:32.209  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:04:34.255  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:04:36.743  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:04:39.774  INFO 28412 --- [nio-8080-exec-7] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:04:41.740  INFO 28412 --- [nio-8080-exec-5] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:04:45.018  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:04:47.253  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:04:49.767  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:04:51.720  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:04:54.079  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:04:56.584  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:04:59.071  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:02.293  INFO 28412 --- [nio-8080-exec-1] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:05:04.270  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:05:07.517  INFO 28412 --- [nio-8080-exec-7] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:09.464  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:05:11.857  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:05:15.017  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:17.494  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:19.269  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:22.314  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:05:24.293  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:05:27.501  INFO 28412 --- [nio-8080-exec-10] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:05:29.209  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:05:31.896  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:34.303  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:37.314  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:39.090  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:05:41.868  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:05:44.397  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:05:46.961  INFO 28412 --- [nio-8080-exec-1] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:50.041  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:05:52.449  INFO 28412 --- [nio-8080-exec-10] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:05:54.117  INFO 28412 --- [nio-8080-exec-7] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:56.823  INFO 28412 --- [nio-8080-exec-5] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:05:59.133  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:06:02.250  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:06:04.630  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:06:06.739  INFO 28412 --- [nio-8080-exec-3] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:06:09.227  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:06:12.485  INFO 28412 --- [nio-8080-exec-7] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:06:14.620  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:06:17.293  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:06:19.238  INFO 28412 --- [nio-8080-exec-1] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:06:22.057  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:06:24.294  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:06:27.049  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:06:29.502 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:32.377 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:34.851 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:37.303 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:39.647 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:42.337 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:44.482 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:47.414 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:49.966 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:52.498 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:54.709 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:57.065 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:06:59.337 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:07:01.940 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:07:04.057 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:07:06.884 ERROR 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Exception occurred during order fulfillment
+java.lang.NullPointerException: Cannot invoke "com.example.orders.UserAccount.getBalance()" because "user" is null
+	at com.example.orders.OrderProcessingService.validateCredit(OrderProcessingService.java:142)
+	at com.example.orders.OrderProcessingService.processOrder(OrderProcessingService.java:87)
+	at com.example.orders.OrderController.submit(OrderController.java:54)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+2026-10-02 13:07:09.751  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:07:11.865  INFO 28412 --- [nio-8080-exec-3] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:07:14.097  INFO 28412 --- [nio-8080-exec-5] c.e.orders.OrderProcessingService      : Kafka consumer partition rebalance completed successfully
+2026-10-02 13:07:17.414  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:07:19.324  INFO 28412 --- [nio-8080-exec-10] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:07:22.165  INFO 28412 --- [nio-8080-exec-6] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:07:24.854  INFO 28412 --- [nio-8080-exec-10] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:07:26.898  INFO 28412 --- [nio-8080-exec-2] c.e.orders.OrderProcessingService      : Initializing Spring Framework Servlet 'dispatcherServlet'
+2026-10-02 13:07:29.105  INFO 28412 --- [nio-8080-exec-7] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:07:32.463  INFO 28412 --- [nio-8080-exec-3] c.e.orders.OrderProcessingService      : Fetching user preferences for account #94821
+2026-10-02 13:07:34.571  INFO 28412 --- [nio-8080-exec-4] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms
+2026-10-02 13:07:36.954  INFO 28412 --- [nio-8080-exec-9] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:07:39.355  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Completed 200 OK in 14ms
+2026-10-02 13:07:42.207  INFO 28412 --- [nio-8080-exec-8] c.e.orders.OrderProcessingService      : Scheduled audit cron job finished in 420ms

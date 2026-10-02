@@ -2,6 +2,7 @@ import os
 import io
 import csv
 import json
+import tempfile
 from datetime import datetime
 from typing import Optional, List
 from contextlib import asynccontextmanager
@@ -31,6 +32,86 @@ def initialize_default_dataset():
 
 # Ensure initialized at module import for Serverless runtimes
 initialize_default_dataset()
+
+def resolve_dataset(name: Optional[str] = None):
+    if not GLOBAL_STORE.datasets:
+        initialize_default_dataset()
+
+    target_name = name or GLOBAL_STORE.active_dataset_id or "microservices_outage"
+
+    if target_name in GLOBAL_STORE.datasets:
+        return GLOBAL_STORE.datasets[target_name]
+
+    # Pre-built sample datasets instantiation
+    if target_name.startswith("sample_"):
+        st = target_name.replace("sample_", "")
+        content = None
+        if st == "microservices_outage":
+            content = generate_microservices_logs(450)
+        elif st == "nginx_access":
+            content = generate_nginx_logs(400)
+        elif st == "auth_failures":
+            content = generate_auth_attack_logs(300)
+        elif st == "springboot_stacktrace":
+            content = generate_springboot_stacktraces(220)
+        
+        if content:
+            entries, parser_name = parse_raw_log_content(content, source_name=target_name)
+            ds = GLOBAL_STORE.create_dataset(target_name, parser_type=parser_name)
+            ds.add_entries(entries)
+            return ds
+
+    if target_name == "live_stream":
+        ds = GLOBAL_STORE.create_dataset("live_stream", parser_type="json")
+        entries, _ = parse_raw_log_content(generate_microservices_logs(50), source_name="live_stream.json")
+        ds.add_entries(entries)
+        return ds
+
+    # Check disk cache in /tmp for cross-invocation persistence
+    try:
+        cache_dir = os.path.join(tempfile.gettempdir(), "logdoc_cache")
+        tmp_path = os.path.join(cache_dir, f"{target_name}.json")
+        if os.path.exists(tmp_path):
+            with open(tmp_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            from .parsers.base import LogEntry
+            ds = GLOBAL_STORE.create_dataset(target_name, parser_type=data.get("parser_type", "auto"))
+            entries = []
+            for item in data.get("entries", []):
+                ts = None
+                if item.get("timestamp"):
+                    try:
+                        ts = datetime.fromisoformat(item["timestamp"].replace("Z", "+00:00"))
+                    except Exception:
+                        ts = datetime.now()
+                entries.append(LogEntry(
+                    id=item.get("id"),
+                    timestamp=ts or datetime.now(),
+                    level=item.get("level", "INFO"),
+                    service=item.get("service"),
+                    message=item.get("message", ""),
+                    raw=item.get("raw", ""),
+                    trace_id=item.get("trace_id"),
+                    span_id=item.get("span_id"),
+                    source=item.get("source"),
+                    line_number=item.get("line_number"),
+                    extra=item.get("extra", {})
+                ))
+            ds.add_entries(entries)
+            return ds
+    except Exception:
+        pass
+
+    # Fallback to active dataset, or first available dataset
+    if GLOBAL_STORE.active_dataset_id and GLOBAL_STORE.active_dataset_id in GLOBAL_STORE.datasets:
+        return GLOBAL_STORE.datasets[GLOBAL_STORE.active_dataset_id]
+
+    if GLOBAL_STORE.datasets:
+        return next(iter(GLOBAL_STORE.datasets.values()))
+
+    initialize_default_dataset()
+    return GLOBAL_STORE.datasets["microservices_outage"]
+
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -89,10 +170,9 @@ class SelectDatasetPayload(BaseModel):
 
 @router.post("/datasets/select")
 def select_dataset(payload: SelectDatasetPayload):
-    if payload.name not in GLOBAL_STORE.datasets:
-        raise HTTPException(status_code=404, detail="Dataset not found")
-    GLOBAL_STORE.active_dataset_id = payload.name
-    return {"status": "success", "active_dataset": payload.name}
+    ds = resolve_dataset(payload.name)
+    GLOBAL_STORE.active_dataset_id = ds.name
+    return {"status": "success", "active_dataset": ds.name}
 
 
 @router.post("/upload")
@@ -129,6 +209,21 @@ async def upload_log_file(file: UploadFile = File(...)):
 
     dataset = GLOBAL_STORE.create_dataset(dataset_name, parser_type=parser_name)
     dataset.add_entries(entries)
+    GLOBAL_STORE.active_dataset_id = dataset_name
+
+    # Write to /tmp cache for cross-invocation persistence
+    try:
+        cache_dir = os.path.join(tempfile.gettempdir(), "logdoc_cache")
+        os.makedirs(cache_dir, exist_ok=True)
+        tmp_path = os.path.join(cache_dir, f"{dataset_name}.json")
+        with open(tmp_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "name": dataset_name,
+                "parser_type": parser_name,
+                "entries": [e.to_dict() for e in entries]
+            }, f)
+    except Exception:
+        pass
 
     return {
         "status": "success",
@@ -184,7 +279,7 @@ def get_logs(
     offset: int = 0,
     sort_order: str = "desc"
 ):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
         return {"total": 0, "limit": limit, "offset": offset, "logs": []}
 
@@ -204,7 +299,7 @@ def get_logs(
 
 @router.get("/clusters")
 def get_clusters(dataset: Optional[str] = None):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
         return {"clusters": []}
     return {"clusters": ds.clusters}
@@ -212,7 +307,7 @@ def get_clusters(dataset: Optional[str] = None):
 
 @router.get("/anomalies")
 def get_anomalies(dataset: Optional[str] = None):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
         return {"anomalies": []}
     return {"anomalies": ds.anomalies}
@@ -220,7 +315,7 @@ def get_anomalies(dataset: Optional[str] = None):
 
 @router.get("/metrics")
 def get_metrics(dataset: Optional[str] = None):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
         return {}
     return ds.metrics
@@ -232,9 +327,9 @@ class DiagnosticsPayload(BaseModel):
 
 @router.post("/diagnostics")
 async def run_diagnostics(payload: DiagnosticsPayload):
-    ds = GLOBAL_STORE.get_dataset(payload.dataset)
-    if not ds:
-        raise HTTPException(status_code=404, detail="Dataset not found")
+    ds = resolve_dataset(payload.dataset)
+    if not ds or not ds.entries_dict:
+        raise HTTPException(status_code=400, detail="No log entries available to diagnose. Please load or upload a dataset first.")
 
     api_key = payload.gemini_api_key or os.environ.get("GEMINI_API_KEY")
 
@@ -281,9 +376,9 @@ def export_logs(
     is_regex: bool = False,
     levels: Optional[List[str]] = Query(None),
 ):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
-        raise HTTPException(status_code=404, detail="Dataset not found")
+        raise HTTPException(status_code=400, detail="No logs available to export")
 
     res = ds.filter_logs(query=q, is_regex=is_regex, levels=levels, limit=10000, offset=0, sort_order="asc")
     logs = res["logs"]
@@ -316,9 +411,9 @@ def export_logs(
 
 @router.get("/export/report", response_class=HTMLResponse)
 def generate_incident_report(dataset: Optional[str] = None):
-    ds = GLOBAL_STORE.get_dataset(dataset)
+    ds = resolve_dataset(dataset)
     if not ds:
-        raise HTTPException(status_code=404, detail="Dataset not found")
+        raise HTTPException(status_code=400, detail="No dataset available for report")
 
     diag = analyze_with_heuristics(
         entries=ds.entries_dict,

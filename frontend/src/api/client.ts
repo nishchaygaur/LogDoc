@@ -136,7 +136,14 @@ export async function runDiagnostics(dataset?: string, geminiApiKey?: string): P
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ dataset, gemini_api_key: geminiApiKey || undefined }),
   });
-  if (!res.ok) throw new Error('Failed to run diagnostics');
+  if (!res.ok) {
+    let msg = `Diagnostics failed (HTTP ${res.status})`;
+    try {
+      const data = await res.json();
+      if (data?.detail) msg = data.detail;
+    } catch {}
+    throw new Error(msg);
+  }
   return res.json();
 }
 

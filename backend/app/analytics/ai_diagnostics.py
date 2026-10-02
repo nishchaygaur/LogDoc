@@ -189,15 +189,27 @@ Provide a structured, professional incident diagnosis with:
 4. Step-by-Step Remediation Plan (Immediate mitigation + long-term fix)
 """
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-        )
+    model_candidates = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash"]
+    response = None
+    used_model = None
+
+    for model_name in model_candidates:
+        try:
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt,
+            )
+            if response and response.text:
+                used_model = model_name
+                break
+        except Exception:
+            continue
+
+    if response and response.text:
         heuristic = analyze_with_heuristics(entries, top_errors, anomalies, metrics)
         return {
             "source": "gemini_ai",
-            "model": "gemini-2.5-flash",
+            "model": used_model,
             "executive_summary": response.text,
             "diagnosed_issues": heuristic["diagnosed_issues"],
             "affected_services": heuristic["affected_services"],
@@ -206,7 +218,8 @@ Provide a structured, professional incident diagnosis with:
             "anomalies_detected": len(anomalies),
             "gemini_available": True
         }
-    except Exception as e:
+    else:
         heuristic = analyze_with_heuristics(entries, top_errors, anomalies, metrics)
-        heuristic["note"] = f"Gemini API call failed ({str(e)}), used heuristic diagnosis."
+        heuristic["note"] = "Gemini API unavailable with provided key; used heuristic diagnosis."
         return heuristic
+
