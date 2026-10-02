@@ -8,7 +8,7 @@ import { ClusteringView } from './components/ClusteringView';
 import { AnomalyAlerts } from './components/AnomalyAlerts';
 import { AIDiagnosticsModal } from './components/AIDiagnosticsModal';
 import { UploadModal } from './components/UploadModal';
-import { ExportModal } from './components/ExportModal';
+import { ExportModal, UploadedDatasetData } from './components/ExportModal';
 
 import {
   fetchDatasets,
@@ -40,6 +40,28 @@ export const App: React.FC = () => {
   // Datasets state
   const [datasets, setDatasets] = useState<DatasetSummary[]>([]);
   const [activeDataset, setActiveDataset] = useState<string | null>(null);
+
+  // Client-stored uploaded datasets (preserves user uploads across serverless lambdas)
+  const [uploadedDatasets, setUploadedDatasets] = useState<Record<string, UploadedDatasetData>>(() => {
+    try {
+      const saved = sessionStorage.getItem('logdoc_uploaded_datasets');
+      return saved ? JSON.parse(saved) : {};
+    } catch {
+      return {};
+    }
+  });
+
+  const saveUploadedDataset = (data: UploadedDatasetData) => {
+    setUploadedDatasets((prev) => {
+      const next = { ...prev, [data.dataset_name]: data };
+      try {
+        sessionStorage.setItem('logdoc_uploaded_datasets', JSON.stringify(next));
+      } catch (err) {
+        console.warn('Could not persist to sessionStorage:', err);
+      }
+      return next;
+    });
+  };
 
   // Main telemetry state
   const [logs, setLogs] = useState<LogEntry[]>([]);
@@ -83,14 +105,32 @@ export const App: React.FC = () => {
   const loadDatasetsList = useCallback(async () => {
     try {
       const data = await fetchDatasets();
-      setDatasets(data.datasets);
-      if (data.active_dataset && !activeDataset) {
-        setActiveDataset(data.active_dataset);
+      const uploadedSummaries: DatasetSummary[] = Object.values(uploadedDatasets).map((d) => ({
+        id: d.dataset_name,
+        name: d.dataset_name,
+        parser_type: d.parser_used,
+        log_count: d.logs.length,
+        is_active: d.dataset_name === activeDataset,
+      }));
+
+      const serverDatasets = (data?.datasets || []).filter(
+        (sd) => !uploadedDatasets[sd.name]
+      );
+
+      const merged = [...uploadedSummaries, ...serverDatasets];
+      setDatasets(merged);
+
+      if (!activeDataset) {
+        if (uploadedSummaries.length > 0) {
+          setActiveDataset(uploadedSummaries[0].name);
+        } else if (data?.active_dataset) {
+          setActiveDataset(data.active_dataset);
+        }
       }
     } catch (err) {
       console.error('Failed to load datasets:', err);
     }
-  }, [activeDataset]);
+  }, [activeDataset, uploadedDatasets]);
 
   useEffect(() => {
     loadDatasetsList();
@@ -99,6 +139,82 @@ export const App: React.FC = () => {
   // Load telemetry data whenever active dataset or filters change
   const refreshData = useCallback(async () => {
     if (!activeDataset) return;
+
+    // Fast path: In-memory filtering for user-uploaded datasets
+    if (uploadedDatasets[activeDataset]) {
+      const up = uploadedDatasets[activeDataset];
+      setIsLoading(true);
+      try {
+        let filtered = up.logs;
+
+        // Level filter
+        if (filters.levels.length > 0) {
+          const levelSet = new Set(filters.levels.map((l) => l.toUpperCase()));
+          filtered = filtered.filter((l) => levelSet.has(l.level));
+        }
+
+        // Service filter
+        if (filters.selectedService) {
+          filtered = filtered.filter((l) => l.service === filters.selectedService);
+        }
+
+        // Template filter
+        if (filters.selectedTemplateId !== null && filters.selectedTemplateId !== undefined) {
+          filtered = filtered.filter((l) => l.template_id === filters.selectedTemplateId);
+        }
+
+        // Time epoch filter
+        if (filters.startEpoch !== null && filters.startEpoch !== undefined) {
+          filtered = filtered.filter((l) => l.timestamp_epoch !== null && l.timestamp_epoch >= filters.startEpoch!);
+        }
+        if (filters.endEpoch !== null && filters.endEpoch !== undefined) {
+          filtered = filtered.filter((l) => l.timestamp_epoch !== null && l.timestamp_epoch <= filters.endEpoch!);
+        }
+
+        // Search Query filter
+        if (filters.query && filters.query.trim()) {
+          const q = filters.query.trim();
+          if (filters.isRegex) {
+            try {
+              const rx = new RegExp(q, 'i');
+              filtered = filtered.filter((l) => rx.test(l.message) || rx.test(l.raw));
+            } catch {
+              const qLower = q.toLowerCase();
+              filtered = filtered.filter(
+                (l) => l.message.toLowerCase().includes(qLower) || l.raw.toLowerCase().includes(qLower)
+              );
+            }
+          } else {
+            const qLower = q.toLowerCase();
+            filtered = filtered.filter(
+              (l) => l.message.toLowerCase().includes(qLower) || l.raw.toLowerCase().includes(qLower)
+            );
+          }
+        }
+
+        // Sort order
+        if (filters.sortOrder === 'asc') {
+          filtered = [...filtered].sort((a, b) => (a.timestamp_epoch || 0) - (b.timestamp_epoch || 0));
+        } else {
+          filtered = [...filtered].sort((a, b) => (b.timestamp_epoch || 0) - (a.timestamp_epoch || 0));
+        }
+
+        const total = filtered.length;
+        const offset = (currentPage - 1) * pageSize;
+        const pageLogs = filtered.slice(offset, offset + pageSize);
+
+        setLogs(pageLogs);
+        setTotalLogs(total);
+        setMetrics(up.metrics);
+        setClusters(up.clusters);
+        setAnomalies(up.anomalies);
+      } finally {
+        setIsLoading(false);
+      }
+      return;
+    }
+
+    // Server-side path: Sample datasets & serverless datasets
     setIsLoading(true);
     try {
       const [logsData, metricsData, clustersData, anomaliesData] = await Promise.all([
@@ -130,7 +246,7 @@ export const App: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [activeDataset, filters, currentPage, pageSize]);
+  }, [activeDataset, uploadedDatasets, filters, currentPage, pageSize]);
 
   useEffect(() => {
     refreshData();
@@ -141,7 +257,6 @@ export const App: React.FC = () => {
     const cleanupWs = createLogWebSocket((message) => {
       if (message.type === 'log_entry') {
         const newEntry: LogEntry = message.entry;
-        // If current dataset matches live stream or user is watching live stream
         if (message.dataset === activeDataset || activeDataset === 'live_stream') {
           setLogs((prev) => [newEntry, ...prev.slice(0, pageSize - 1)]);
           setTotalLogs((prev) => prev + 1);
@@ -157,10 +272,11 @@ export const App: React.FC = () => {
   // Handle switching datasets
   const handleSelectDataset = async (name: string) => {
     try {
-      await selectDataset(name);
+      if (!uploadedDatasets[name]) {
+        await selectDataset(name);
+      }
       setActiveDataset(name);
       setCurrentPage(1);
-      // Reset template filter on dataset change
       setFilters((prev) => ({ ...prev, selectedTemplateId: null, selectedService: null }));
     } catch (err) {
       alert('Error switching dataset: ' + err);
@@ -170,8 +286,36 @@ export const App: React.FC = () => {
   // Handle file upload
   const handleUploadFile = async (file: File) => {
     const res = await uploadLogFile(file);
-    await loadDatasetsList();
-    await handleSelectDataset(res.dataset_name);
+    const newRecord: UploadedDatasetData = {
+      dataset_name: res.dataset_name,
+      parser_used: res.parser_used,
+      logs: res.logs || [],
+      clusters: res.clusters || [],
+      anomalies: res.anomalies || [],
+      metrics: res.metrics || {
+        total_logs: res.total_parsed,
+        level_counts: {},
+        error_rate: 0,
+        services: [],
+        top_errors: [],
+        histogram: [],
+        time_range: { start: null, end: null, duration_seconds: 0 },
+      },
+    };
+
+    saveUploadedDataset(newRecord);
+    setActiveDataset(res.dataset_name);
+    setCurrentPage(1);
+    setFilters({
+      query: '',
+      isRegex: false,
+      levels: [],
+      selectedService: null,
+      selectedTemplateId: null,
+      startEpoch: null,
+      endEpoch: null,
+      sortOrder: 'desc',
+    });
   };
 
   // Handle sample dataset load
@@ -205,7 +349,20 @@ export const App: React.FC = () => {
 
     setIsDiagLoading(true);
     try {
-      const res = await runDiagnostics(activeDataset || undefined, keyToUse || undefined);
+      let context: { error_samples?: any[]; anomalies?: any[]; metrics?: any } | undefined = undefined;
+      if (activeDataset && uploadedDatasets[activeDataset]) {
+        const up = uploadedDatasets[activeDataset];
+        const errorLogs = up.logs.filter((l) => l.level === 'ERROR' || l.level === 'CRITICAL');
+        const warnLogs = up.logs.filter((l) => l.level === 'WARN');
+        const sampleContext = [...errorLogs.slice(0, 100), ...warnLogs.slice(0, 50), ...up.logs.slice(0, 50)];
+        context = {
+          error_samples: sampleContext,
+          anomalies: up.anomalies,
+          metrics: up.metrics,
+        };
+      }
+
+      const res = await runDiagnostics(activeDataset || undefined, keyToUse || undefined, context);
       setDiagnosticsResult(res);
       setIsDiagnosticsOpen(true);
     } catch (err) {
@@ -408,6 +565,7 @@ export const App: React.FC = () => {
         isOpen={isExportOpen}
         onClose={() => setIsExportOpen(false)}
         activeDataset={activeDataset}
+        uploadedDataset={activeDataset ? uploadedDatasets[activeDataset] : null}
       />
     </div>
   );

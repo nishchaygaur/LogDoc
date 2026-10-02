@@ -17,7 +17,19 @@ export async function selectDataset(name: string): Promise<void> {
   if (!res.ok) throw new Error('Failed to select dataset');
 }
 
-export async function uploadLogFile(file: File): Promise<{ dataset_name: string; total_parsed: number; parser_used: string }> {
+export interface UploadResponse {
+  status: string;
+  dataset_name: string;
+  parser_used: string;
+  total_parsed: number;
+  error_count: number;
+  logs: LogEntry[];
+  clusters: DrainCluster[];
+  anomalies: Anomaly[];
+  metrics: Metrics;
+}
+
+export async function uploadLogFile(file: File): Promise<UploadResponse> {
   const formData = new FormData();
   formData.append('file', file);
   
@@ -130,11 +142,31 @@ export async function fetchMetrics(dataset?: string): Promise<Metrics> {
   return res.json();
 }
 
-export async function runDiagnostics(dataset?: string, geminiApiKey?: string): Promise<DiagnosticResult> {
+export interface DiagnosticContext {
+  error_samples?: any[];
+  anomalies?: any[];
+  metrics?: any;
+}
+
+export async function runDiagnostics(
+  dataset?: string,
+  geminiApiKey?: string,
+  context?: DiagnosticContext
+): Promise<DiagnosticResult> {
+  const body: any = {
+    dataset,
+    gemini_api_key: geminiApiKey || undefined,
+  };
+  if (context?.error_samples && context?.metrics) {
+    body.error_samples = context.error_samples;
+    body.anomalies = context.anomalies;
+    body.metrics = context.metrics;
+  }
+
   const res = await fetch(`${API_BASE}/diagnostics`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ dataset, gemini_api_key: geminiApiKey || undefined }),
+    body: JSON.stringify(body),
   });
   if (!res.ok) {
     let msg = `Diagnostics failed (HTTP ${res.status})`;

@@ -108,3 +108,36 @@ def test_fastapi_endpoints():
         r = test_client.get("/api/export/report")
         assert r.status_code == 200
         assert "<!DOCTYPE html>" in r.text
+
+def test_upload_full_payload_and_client_diagnostics():
+    with TestClient(app) as test_client:
+        sample_log = (
+            "2026-10-02 10:00:00 [ERROR] auth-service: Failed password for admin from 10.0.0.1\n"
+            "2026-10-02 10:00:01 [WARN] auth-service: Rate limit threshold approaching for 10.0.0.1\n"
+            "2026-10-02 10:00:02 [INFO] auth-service: Healthcheck OK\n"
+        )
+        files = {"file": ("auth_test.log", sample_log.encode("utf-8"), "text/plain")}
+        r = test_client.post("/api/upload", files=files)
+        assert r.status_code == 200
+        res = r.json()
+        assert res["status"] == "success"
+        assert res["total_parsed"] == 3
+        assert "logs" in res
+        assert len(res["logs"]) == 3
+        assert "clusters" in res
+        assert "anomalies" in res
+        assert "metrics" in res
+        assert res["metrics"]["total_logs"] == 3
+
+        # Test diagnostics endpoint with client-supplied context
+        diag_payload = {
+            "error_samples": res["logs"],
+            "anomalies": res["anomalies"],
+            "metrics": res["metrics"]
+        }
+        r_diag = test_client.post("/api/diagnostics", json=diag_payload)
+        assert r_diag.status_code == 200
+        diag_res = r_diag.json()
+        assert "executive_summary" in diag_res
+        assert "diagnosed_issues" in diag_res
+

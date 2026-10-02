@@ -4,7 +4,7 @@ import csv
 import json
 import tempfile
 from datetime import datetime
-from typing import Optional, List
+from typing import Optional, List, Dict, Any
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, APIRouter, UploadFile, File, Form, Query, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
@@ -230,7 +230,11 @@ async def upload_log_file(file: UploadFile = File(...)):
         "dataset_name": dataset_name,
         "parser_used": parser_name,
         "total_parsed": len(entries),
-        "error_count": dataset.metrics.get("level_counts", {}).get("ERROR", 0)
+        "error_count": dataset.metrics.get("level_counts", {}).get("ERROR", 0),
+        "logs": dataset.entries_dict,
+        "clusters": dataset.clusters,
+        "anomalies": dataset.anomalies,
+        "metrics": dataset.metrics
     }
 
 
@@ -324,14 +328,35 @@ def get_metrics(dataset: Optional[str] = None):
 class DiagnosticsPayload(BaseModel):
     dataset: Optional[str] = None
     gemini_api_key: Optional[str] = None
+    error_samples: Optional[List[Dict[str, Any]]] = None
+    anomalies: Optional[List[Dict[str, Any]]] = None
+    metrics: Optional[Dict[str, Any]] = None
 
 @router.post("/diagnostics")
 async def run_diagnostics(payload: DiagnosticsPayload):
+    api_key = payload.gemini_api_key or os.environ.get("GEMINI_API_KEY")
+
+    # If client passed log samples and metrics directly (serverless client-side mode for uploaded files)
+    if payload.error_samples is not None and payload.metrics is not None:
+        if api_key:
+            return await analyze_with_gemini(
+                api_key=api_key,
+                entries=payload.error_samples,
+                top_errors=payload.metrics.get("top_errors", []),
+                anomalies=payload.anomalies or [],
+                metrics=payload.metrics
+            )
+        else:
+            return analyze_with_heuristics(
+                entries=payload.error_samples,
+                top_errors=payload.metrics.get("top_errors", []),
+                anomalies=payload.anomalies or [],
+                metrics=payload.metrics
+            )
+
     ds = resolve_dataset(payload.dataset)
     if not ds or not ds.entries_dict:
         raise HTTPException(status_code=400, detail="No log entries available to diagnose. Please load or upload a dataset first.")
-
-    api_key = payload.gemini_api_key or os.environ.get("GEMINI_API_KEY")
 
     if api_key:
         result = await analyze_with_gemini(
