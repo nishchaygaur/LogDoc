@@ -1,13 +1,13 @@
 import os
 import re
+import importlib.util
 from typing import List, Dict, Any, Optional
 
-try:
-    from google import genai
-    from google.genai import types
-    HAVE_GEMINI = True
-except ImportError:
-    HAVE_GEMINI = False
+def is_gemini_available() -> bool:
+    try:
+        return importlib.util.find_spec("google.genai") is not None
+    except Exception:
+        return False
 
 KNOWN_INCIDENT_PATTERNS = [
     {
@@ -142,7 +142,7 @@ def analyze_with_heuristics(
         "total_errors": total_errors,
         "error_rate": error_rate,
         "anomalies_detected": len(anomalies),
-        "gemini_available": HAVE_GEMINI
+        "gemini_available": is_gemini_available()
     }
 
 
@@ -153,7 +153,9 @@ async def analyze_with_gemini(
     anomalies: List[Dict[str, Any]],
     metrics: Dict[str, Any]
 ) -> Dict[str, Any]:
-    if not HAVE_GEMINI:
+    try:
+        from google import genai
+    except ImportError:
         res = analyze_with_heuristics(entries, top_errors, anomalies, metrics)
         res["note"] = "google-genai SDK not available; returned heuristic diagnostics."
         return res

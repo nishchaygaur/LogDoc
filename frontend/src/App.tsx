@@ -15,10 +15,7 @@ import {
   selectDataset,
   uploadLogFile,
   loadSampleDataset,
-  fetchLogs,
-  fetchClusters,
-  fetchAnomalies,
-  fetchMetrics,
+  fetchOverview,
   runDiagnostics,
   toggleSimulator,
   createLogWebSocket,
@@ -217,30 +214,25 @@ export const App: React.FC = () => {
     // Server-side path: Sample datasets & serverless datasets
     setIsLoading(true);
     try {
-      const [logsData, metricsData, clustersData, anomaliesData] = await Promise.all([
-        fetchLogs({
-          dataset: activeDataset,
-          q: filters.query || undefined,
-          is_regex: filters.isRegex,
-          levels: filters.levels.length > 0 ? filters.levels : undefined,
-          services: filters.selectedService ? [filters.selectedService] : undefined,
-          template_id: filters.selectedTemplateId,
-          start_epoch: filters.startEpoch,
-          end_epoch: filters.endEpoch,
-          limit: pageSize,
-          offset: (currentPage - 1) * pageSize,
-          sort_order: filters.sortOrder,
-        }),
-        fetchMetrics(activeDataset),
-        fetchClusters(activeDataset),
-        fetchAnomalies(activeDataset),
-      ]);
+      const data = await fetchOverview({
+        dataset: activeDataset,
+        q: filters.query || undefined,
+        is_regex: filters.isRegex,
+        levels: filters.levels.length > 0 ? filters.levels : undefined,
+        services: filters.selectedService ? [filters.selectedService] : undefined,
+        template_id: filters.selectedTemplateId,
+        start_epoch: filters.startEpoch,
+        end_epoch: filters.endEpoch,
+        limit: pageSize,
+        offset: (currentPage - 1) * pageSize,
+        sort_order: filters.sortOrder,
+      });
 
-      setLogs(logsData.logs);
-      setTotalLogs(logsData.total);
-      setMetrics(metricsData);
-      setClusters(clustersData.clusters);
-      setAnomalies(anomaliesData.anomalies);
+      setLogs(data.logs);
+      setTotalLogs(data.total);
+      setMetrics(data.metrics);
+      setClusters(data.clusters);
+      setAnomalies(data.anomalies);
     } catch (err) {
       console.error('Failed to refresh data:', err);
     } finally {

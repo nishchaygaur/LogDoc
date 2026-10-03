@@ -30,8 +30,7 @@ def initialize_default_dataset():
         dataset = GLOBAL_STORE.create_dataset(dataset_name, parser_type=detected_parser)
         dataset.add_entries(entries)
 
-# Ensure initialized at module import for Serverless runtimes
-initialize_default_dataset()
+# Default dataset is initialized lazily on-demand in resolve_dataset()
 
 def resolve_dataset(name: Optional[str] = None):
     if not GLOBAL_STORE.datasets:
@@ -299,6 +298,56 @@ def get_logs(
         offset=offset,
         sort_order=sort_order
     )
+
+
+@router.get("/overview")
+def get_dataset_overview(
+    dataset: Optional[str] = None,
+    q: Optional[str] = None,
+    is_regex: bool = False,
+    levels: Optional[List[str]] = Query(None),
+    services: Optional[List[str]] = Query(None),
+    template_id: Optional[int] = None,
+    start_epoch: Optional[float] = None,
+    end_epoch: Optional[float] = None,
+    limit: int = 50,
+    offset: int = 0,
+    sort_order: str = "desc"
+):
+    ds = resolve_dataset(dataset)
+    if not ds:
+        return {
+            "total": 0,
+            "limit": limit,
+            "offset": offset,
+            "logs": [],
+            "metrics": {},
+            "clusters": [],
+            "anomalies": []
+        }
+
+    logs_res = ds.filter_logs(
+        query=q,
+        is_regex=is_regex,
+        levels=levels,
+        services=services,
+        template_id=template_id,
+        start_epoch=start_epoch,
+        end_epoch=end_epoch,
+        limit=limit,
+        offset=offset,
+        sort_order=sort_order
+    )
+
+    return {
+        "logs": logs_res["logs"],
+        "total": logs_res["total"],
+        "limit": logs_res["limit"],
+        "offset": logs_res["offset"],
+        "metrics": ds.metrics,
+        "clusters": ds.clusters,
+        "anomalies": ds.anomalies
+    }
 
 
 @router.get("/clusters")

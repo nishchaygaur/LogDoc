@@ -122,6 +122,41 @@ export async function fetchLogs(params: FetchLogsParams): Promise<{ total: numbe
   return res.json();
 }
 
+export interface OverviewResponse {
+  logs: LogEntry[];
+  total: number;
+  limit: number;
+  offset: number;
+  metrics: Metrics;
+  clusters: DrainCluster[];
+  anomalies: Anomaly[];
+}
+
+export async function fetchOverview(params: FetchLogsParams): Promise<OverviewResponse> {
+  const searchParams = new URLSearchParams();
+  if (params.dataset) searchParams.append('dataset', params.dataset);
+  if (params.q) searchParams.append('q', params.q);
+  if (params.is_regex) searchParams.append('is_regex', 'true');
+  if (params.levels && params.levels.length > 0) {
+    params.levels.forEach(lvl => searchParams.append('levels', lvl));
+  }
+  if (params.services && params.services.length > 0) {
+    params.services.forEach(svc => searchParams.append('services', svc));
+  }
+  if (params.template_id !== null && params.template_id !== undefined) {
+    searchParams.append('template_id', params.template_id.toString());
+  }
+  if (params.start_epoch) searchParams.append('start_epoch', params.start_epoch.toString());
+  if (params.end_epoch) searchParams.append('end_epoch', params.end_epoch.toString());
+  if (params.limit) searchParams.append('limit', params.limit.toString());
+  if (params.offset !== undefined) searchParams.append('offset', params.offset.toString());
+  if (params.sort_order) searchParams.append('sort_order', params.sort_order);
+
+  const res = await fetch(`${API_BASE}/overview?${searchParams.toString()}`);
+  if (!res.ok) throw new Error('Failed to fetch dataset overview');
+  return res.json();
+}
+
 export async function fetchClusters(dataset?: string): Promise<{ clusters: DrainCluster[] }> {
   const url = dataset ? `${API_BASE}/clusters?dataset=${encodeURIComponent(dataset)}` : `${API_BASE}/clusters`;
   const res = await fetch(url);
