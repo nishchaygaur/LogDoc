@@ -1,6 +1,7 @@
 import { LogEntry, DatasetSummary, DrainCluster, Anomaly, Metrics, DiagnosticResult } from '../types/log';
 
-const API_BASE = '/api';
+const customApi = (import.meta.env.VITE_API_URL as string | undefined)?.replace(/\/$/, '');
+const API_BASE = customApi ? (customApi.endsWith('/api') ? customApi : `${customApi}/api`) : '/api';
 
 export async function fetchDatasets(): Promise<{ datasets: DatasetSummary[]; active_dataset: string | null }> {
   const res = await fetch(`${API_BASE}/datasets`);
@@ -190,8 +191,23 @@ export async function toggleSimulator(action: 'start' | 'stop', delaySeconds: nu
 }
 
 export function createLogWebSocket(onMessage: (data: any) => void): () => void {
-  const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-  const wsUrl = `${protocol}//${window.location.host}/ws`;
+  let wsUrl = '';
+  const customWs = import.meta.env.VITE_WS_URL as string | undefined;
+  if (customWs) {
+    wsUrl = customWs;
+  } else if (customApi) {
+    try {
+      const parsed = new URL(customApi);
+      const wsProto = parsed.protocol === 'https:' ? 'wss:' : 'ws:';
+      wsUrl = `${wsProto}//${parsed.host}/ws`;
+    } catch {
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      wsUrl = `${protocol}//${window.location.host}/ws`;
+    }
+  } else {
+    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    wsUrl = `${protocol}//${window.location.host}/ws`;
+  }
   let ws: WebSocket | null = null;
   let isClosed = false;
   let retryCount = 0;
