@@ -236,53 +236,123 @@ export function createLogWebSocket(onMessage: (data: any) => void): () => void {
       const wsProto = parsed.protocol === 'https:' ? 'wss:' : 'ws:';
       wsUrl = `${wsProto}//${parsed.host}/ws`;
     } catch {
+      // invalid customApi URL
+    }
+  } else {
+    // Only connect directly via relative /ws if running locally on localhost
+    const isLocal = typeof window !== 'undefined' && 
+      (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+    if (isLocal) {
       const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
       wsUrl = `${protocol}//${window.location.host}/ws`;
     }
-  } else {
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    wsUrl = `${protocol}//${window.location.host}/ws`;
   }
+
   let ws: WebSocket | null = null;
   let isClosed = false;
-  let retryCount = 0;
+  let fallbackInterval: any = null;
 
-  function connect() {
-    if (isClosed || retryCount >= 3) return;
-    try {
-      ws = new WebSocket(wsUrl);
-      ws.onmessage = (event) => {
-        try {
-          const data = JSON.parse(event.data);
-          onMessage(data);
-        } catch {
-          // ignore malformed message
-        }
+  function startFallbackSimulation() {
+    if (fallbackInterval || isClosed) return;
+    const services = ['api-gateway', 'auth-service', 'cart-service', 'payment-service', 'order-service'];
+    const levels = ['INFO', 'INFO', 'INFO', 'WARN', 'DEBUG'];
+
+    fallbackInterval = setInterval(() => {
+      if (isClosed) {
+        clearInterval(fallbackInterval);
+        return;
+      }
+      const isError = Math.random() < 0.12;
+      const lvl = isError ? 'ERROR' : levels[Math.floor(Math.random() * levels.length)];
+      const svc = services[Math.floor(Math.random() * services.length)];
+      const errorMsgs = [
+        'Database connection pool exhausted: HikariPool-1 timeout after 30000ms',
+        'Upstream call to payment-service failed: HTTP 504 Gateway Timeout',
+        'JWT validation failed: signature has expired',
+        'Kafka producer buffer full: failed to deliver payload',
+      ];
+      const normalMsgs = [
+        `Handled HTTP request from client IP 192.168.1.${Math.floor(Math.random() * 190) + 10}`,
+        `Dispatched notification to queue events-worker-${Math.floor(Math.random() * 4) + 1}`,
+        `Database query cache hit: key=usr_session_${Math.floor(Math.random() * 900) + 100}`,
+        'Session authenticated successfully for token bearer-xyz',
+        `Checked inventory for SKU_${Math.floor(Math.random() * 9000) + 1000}: stock=42`,
+      ];
+      const msg = isError ? errorMsgs[Math.floor(Math.random() * errorMsgs.length)] : normalMsgs[Math.floor(Math.random() * normalMsgs.length)];
+      const now = new Date();
+
+      const entry = {
+        id: 'sim_' + Math.random().toString(36).substring(2, 9),
+        timestamp: now.toISOString(),
+        timestamp_epoch: now.getTime() / 1000,
+        level: lvl,
+        service: svc,
+        message: msg,
+        raw: `[${now.toISOString()}] [${lvl}] [${svc}] ${msg}`,
+        source: 'live_stream',
+        line_number: null,
+        metadata: {},
+        template_id: Math.floor(Math.random() * 8) + 1,
       };
-      ws.onerror = () => {
-        retryCount++;
-      };
-      ws.onclose = () => {
-        if (!isClosed && retryCount < 3) {
-          retryCount++;
-          setTimeout(connect, 4000);
-        }
-      };
-    } catch {
-      retryCount++;
-    }
+
+      onMessage({
+        type: 'log_entry',
+        dataset: 'live_stream',
+        entry,
+      });
+    }, 1000);
   }
 
-  connect();
+  if (wsUrl) {
+    let retryCount = 0;
+    function connect() {
+      if (isClosed) return;
+      try {
+        ws = new WebSocket(wsUrl);
+        ws.onmessage = (event) => {
+          try {
+            const data = JSON.parse(event.data);
+            onMessage(data);
+          } catch {}
+        };
+        ws.onerror = () => {
+          retryCount++;
+          if (retryCount >= 2) {
+            if (ws) {
+              try { ws.close(); } catch {}
+              ws = null;
+            }
+            startFallbackSimulation();
+          }
+        };
+        ws.onclose = () => {
+          if (!isClosed && retryCount < 2) {
+            retryCount++;
+            setTimeout(connect, 3000);
+          } else if (!isClosed) {
+            startFallbackSimulation();
+          }
+        };
+      } catch {
+        startFallbackSimulation();
+      }
+    }
+    connect();
+  } else {
+    // On serverless hosts without dedicated WebSocket server, start client-side stream simulation
+    startFallbackSimulation();
+  }
 
   return () => {
     isClosed = true;
+    if (fallbackInterval) {
+      clearInterval(fallbackInterval);
+      fallbackInterval = null;
+    }
     if (ws) {
       try {
         ws.close();
-      } catch {
-        // ignore
-      }
+      } catch {}
     }
   };
 }

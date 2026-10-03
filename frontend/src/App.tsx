@@ -244,8 +244,10 @@ export const App: React.FC = () => {
     refreshData();
   }, [refreshData]);
 
-  // WebSocket Live Streaming connection
+  // WebSocket Live Streaming connection (only active when Live Tail is enabled)
   useEffect(() => {
+    if (!isLiveActive) return;
+
     const cleanupWs = createLogWebSocket((message) => {
       if (message.type === 'log_entry') {
         const newEntry: LogEntry = message.entry;
@@ -259,7 +261,7 @@ export const App: React.FC = () => {
     return () => {
       cleanupWs();
     };
-  }, [activeDataset, pageSize]);
+  }, [isLiveActive, activeDataset, pageSize]);
 
   // Handle switching datasets
   const handleSelectDataset = async (name: string) => {
